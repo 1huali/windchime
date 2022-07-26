@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 1366px) {
+  header {
+    margin-left: 8%;
+    width: 24rem;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+}
+@media (min-width: 991px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.databox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+@media (max-width: 480px) {
+  .databox {
+    width: 95%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .databox {
+    margin: auto;
+    width: 85%;
+    max-width: 37.5rem;
+  }
+}
+@media (min-width: 481px) {
+  .databox .force {
+    order: 1;
+  }
+  .databox .input {
+    order: 2;
+  }
+  .databox .mode {
+    order: 3;
+  }
+  .databox .sensitivity {
+    order: 4;
+  }
+  .databox .mute {
+    order: 5;
+  }
+  .databox .pattern {
+    order: 6;
+  }
+  .databox .plate {
+    order: 7;
+  }
+  .databox .string {
+    order: 8;
+  }
+  .databox .look {
+    order: 9;
+  }
+  .databox .sound {
+    order: 10;
+  }
+}
+@media (min-width: 768px) and (max-width: 1365px) {
+  .databox {
+    width: 40rem;
+  }
+}
+@media (min-width: 991px) {
+  .databox {
+    width: 50rem;
+  }
+}
+@media (min-width: 1366px) {
+  .databox {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .databox .data {
+    margin: 0.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .databox .data {
+    width: calc(25% - 0.5rem);
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .databox .data {
+    width: calc(20% - 0.5rem);
+    max-width: 7rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1365px) {
+  .databox .data {
+    margin: 0.5rem;
+    width: 7rem;
+  }
+}
+@media (min-width: 991px) {
+  .databox .data {
+    width: 9rem;
+  }
+}
+@media (min-width: 1366px) {
+  .databox .data {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+    width: 24rem;
+  }
+}
+.databox .data__button, .databox .data__value {
+  box-sizing: border-box;
+  width: 100%;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-family: "Inter", sans-serif;
+}
+@media (min-width: 768px) and (max-width: 1365px) {
+  .databox .data__button, .databox .data__value {
+    font-size: 13px;
+  }
+}
+@media (min-width: 991px) and (max-width: 1365px) {
+  .databox .data__button, .databox .data__value {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 991px) {
+  .databox .data__button, .databox .data__value {
+    height: 2rem;
+  }
+}
+@media (min-width: 1366px) {
+  .databox .data__button, .databox .data__value {
+    margin: 0;
+    height: 2.25rem;
+    font-size: 1.25rem;
+  }
+}
+.databox .data__button {
+  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.databox .data__button:focus {
+  outline: 1.5px solid #000000;
+}
+@media (min-width: 1366px) {
+  .databox .data__button {
+    width: 10rem;
+  }
+}
+.databox .data__value {
+  margin: 0;
+}
+@media (min-width: 991px) and (max-width: 1365px) {
+  .databox .data__value {
+    margin-top: 0.25rem;
+  }
+}
+@media (min-width: 1366px) {
+  .databox .data__value {
+    flex-grow: 1;
+    display: block;
+    width: calc(100% - 10rem);
+    text-align: center;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+main #windchimeBox {
+  position: relative;
+  min-width: 100vw;
+}
+main #plate {
+  margin: 0;
+  position: absolute;
+  top: 0 !important;
+  width: 100%;
+  color: black;
+  text-align: center;
+  max-width: 100vw;
+  font-size: 2rem;
+}
+@media (max-width: 480px) {
+  main #plate {
+    font-size: 1rem;
+  }
+}
+main .strings {
+  position: absolute;
+  display: none;
+  font-size: 3rem;
+}
+@media (max-width: 480px) {
+  main .strings {
+    font-size: 1rem;
+  }
+}
+main .mass {
+  color: rgb(0, 0, 0);
+  font-size: 4em;
+  position: absolute;
+  height: 10vw;
+  width: 10vw;
+  display: none;
+}
+@media (max-width: 480px) {
+  main .mass {
+    height: 5vw;
+    width: 5vw;
+  }
+}
+
+.chimeLook1 {
+  color: rgb(0, 0, 0);
+}
+
+.chimeLook2 {
+  color: rgb(240, 166, 218);
+}
+
+.chimeLook3 {
+  color: rgb(249, 67, 67);
+}
+
+/*# sourceMappingURL=style.css.map */

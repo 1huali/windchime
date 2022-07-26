@@ -1,22 +1,17 @@
-/***
- * A wind chime study
-Wawa Li
+/*
+    A wind chime study
+    Wawa Li
 
-
-Program incarnating a physical wind chime : initial state, disturbed state. Input disturbances (wind force through mic or mouse)
-Eventually think of an impact consequence (visual noise? audio sound?)
-https://thecodingtrain.com/learning/nature-of-code/2.1-simulating-forces.html
-https://thecodingtrain.com/learning/nature-of-code/2.2-mass-acceleration.html
-https://thecodingtrain.com/learning/nature-of-code/2.4-drag.html
+    Program incarnating a physical wind chime : initial state, disturbed state. Input disturbances (wind force through mic or mouse)
+    Eventually think of an impact consequence (visual noise? audio sound?)
+    https://thecodingtrain.com/learning/nature-of-code/2.1-simulating-forces.html
+    https://thecodingtrain.com/learning/nature-of-code/2.2-mass-acceleration.html
+    https://thecodingtrain.com/learning/nature-of-code/2.4-drag.html
 */
-
-
 
 "use strict";
 window.onload = function () {
-
   micInput();
-
   let windchimeBox = document.getElementById(`windchimeBox`);
   let clicks = 0;
   let windForce=0;
@@ -28,15 +23,15 @@ window.onload = function () {
   let chimesArray = [];
   let userForce = 0;
 
-  let forceInstructionText = document.getElementById("forceInstruction");
-  let currentForceInstructionText = `You can implement the wind by clicking on the chime.`;
+//   let forceInstructionText = document.getElementById("forceInstruction");
+//   let currentForceInstructionText = `You can implement the wind by clicking on the chime.`;
   let angleVelLevelText = document.getElementById(`sensitivityLevel`)
   let currentAngleVelText = ``;
-  let angleVelSlider = document.getElementById(`angleVelSlider`);
+//   let angleVelSlider = document.getElementById(`angleVelSlider`);
   let angleVelLevel = 0;
-  angleVelSlider.max = 1.2 * 100;
-  angleVelSlider.min = 0.1 * 100;
-  angleVelSlider.steps = 1;
+//   angleVelSlider.max = 1.2 * 100;
+//   angleVelSlider.min = 0.1 * 100;
+//   angleVelSlider.steps = 1;
 
 
   //el is the getElementbyId thing visual
@@ -208,9 +203,6 @@ let chime24 = new Chimes (stringchime24, document.getElementById(`chime24`),star
     chimesArray.push(chime4);
     chimesArray.push(chime5);
     chimesArray.push(chime6);
-
-
-
   }
 
   function pattern2(){
@@ -285,31 +277,31 @@ let chime24 = new Chimes (stringchime24, document.getElementById(`chime24`),star
 
   }
 
-//pattern mode setup
-// let currentPattern = `mountain`;
-let patternArray = [pattern1,pattern2,pattern3];
-let patternCurrentIndex = 0;
-let patternChangeButton = document.getElementById(`patternButton`);
-// 
+    //pattern mode setup
+    // let currentPattern = `mountain`;
+    let patternArray = [pattern1,pattern2,pattern3];
+    let patternCurrentIndex = 0;
+    let patternChangeButton = document.getElementById(`patternButton`);
+    // 
 
-//setup variables for interactivity 
-  let startDrag = false;
-  let mx = 0;
-  let my = 0;
+    //setup variables for interactivity 
+    let startDrag = false;
+    let mx = 0;
+    let my = 0;
 
-  //only use Vector from p5 librairies
-  let wind = new p5.Vector(0, 0);
-  let repelWindForce = 0.01;
-  let windButton;
+    //only use Vector from p5 librairies
+    let wind = new p5.Vector(0, 0);
+    let repelWindForce = 0.01;
+    let windButton;
 
-  //chime sound button
-  let selfSoundArray = [];
-  let impactSoundArray = [];
+    //chime sound button
+    let selfSoundArray = [];
+    let impactSoundArray = [];
 
-  let currentSelfSoundMode = `dustSound`;
-  let currentImpactSoundMode = `dustSound`;
-  let changeSoundButton = document.getElementById(`soundButton`);
-let soundModeText = document.getElementById(`currentSound`);
+    let currentSelfSoundMode = `dustSound`;
+    let currentImpactSoundMode = `dustSound`;
+    let changeSoundButton = document.getElementById(`soundButton`);
+    let soundModeText = document.getElementById(`currentSound`);
 
   let dustSound = document.getElementById(`dustSound`);
   let dustSound2 = document.getElementById(`dustSound2`);
@@ -405,52 +397,35 @@ if (event.clientY > yPos){
             startDrag = true;
           }, 2000);
         }
-
-
       } //end if toggle
-
-
     }
   });
 
 
-
-  angleVelSlider.addEventListener("change", function (event) {
-
-
-
-    angleVelLevel = this.value;
-    slider();
-    print();
+//   angleVelSlider.addEventListener("change", function (event) {
+//     angleVelLevel = this.value;
+//     slider();
+//     print();
+//   }); 
 
 
-
-  }); //end of mousedown
-
-
-  userModeSwitch.addEventListener("click", function (event) {
-    // switch state to voiceInput or mouseInput
-
-
-
-    toggle = !toggle;
-    if (toggle) {
-      forceMode = `mouse force input`;
-      currentForceInstructionText = `You can implement the wind by clicking on the chimes.`;
-      currentAngleVelText = ``;
-      currentForceLevelText = `0`;
-      print();
-    } else {
-      forceMode = `mic input`;
-      currentForceInstructionText = `You can implement the wind by blowing in your mic.`;
-      currentForceLevelText = `0`;
-      //value should change with the wind force
-      print();
-    }
-
-
-
-  });
+//   userModeSwitch.addEventListener("click", function (event) {
+//     // switch state to voiceInput or mouseInput
+//     toggle = !toggle;
+//     if (toggle) {
+//       forceMode = `mouse force input`;
+//       currentForceInstructionText = `You can implement the wind by clicking on the chimes.`;
+//       currentAngleVelText = ``;
+//       currentForceLevelText = `0`;
+//       print();
+//     } else {
+//       forceMode = `mic input`;
+//       currentForceInstructionText = `You can implement the wind by blowing in your mic.`;
+//       currentForceLevelText = `0`;
+//       //value should change with the wind force
+//       print();
+//     }
+//   });
 
 //can change the background color - DISABLED 
   // changeChimesFormButton.addEventListener("click", function (event) {
@@ -480,123 +455,75 @@ if (event.clientY > yPos){
 
   // });
 
-//feature that changes the sound of the chimes 
-  changeSoundButton.addEventListener("click", function (event) {
-
-
-
-    currentSoundModeIndex++;
-
-    if (currentSoundModeIndex === selfSoundArray.length) {
-      currentSoundModeIndex = 0;
-    }
-
-    for (let i = 0; i < chimesArray.length; i++) {
-      chimesArray[i].selfSound = selfSoundArray[currentSoundModeIndex];
-      chimesArray[i].impactSound = impactSoundArray[currentSoundModeIndex];
-    }
-currentSelfSoundMode = selfSoundArray[currentSoundModeIndex].id;
-
-print();
-
-
-
-  });
-
+    //feature that changes the sound of the chimes 
+    changeSoundButton.addEventListener("click", function (event) {
+        currentSoundModeIndex++;
+        if (currentSoundModeIndex === selfSoundArray.length) {
+            currentSoundModeIndex = 0;
+        }
+        for (let i = 0; i < chimesArray.length; i++) {
+            chimesArray[i].selfSound = selfSoundArray[currentSoundModeIndex];
+            chimesArray[i].impactSound = impactSoundArray[currentSoundModeIndex];
+        }
+        currentSelfSoundMode = selfSoundArray[currentSoundModeIndex].id;
+        print();
+    });
   //feature that goes through the look/characters of the chimes
-  changeLookButton.addEventListener("click", function (event) {
-
-
-
+    changeLookButton.addEventListener("click", function (event) {
     chimeFormIndex++;
     if (chimeFormIndex === chimeFormArray.length) {
       chimeFormIndex = 0;
     }
-
     for (let j = 0; j < chimesArray.length; j++) {
       chimesArray[j].setChimeLook(chimeFormArray[chimeFormIndex]);
     };
-
     print();
-
-
-
   });
 
 
   //feature that mutes the chimes
 muteButton.addEventListener("click", function (event){
-
-
-
-  mute = !mute;
- 
-  if (mute === true) {
-
-for (let i=0;i < chimesArray.length; i++){
-chimesArray[i].selfSound.pause();
-chimesArray[i].impactSound.pause();
-} 
-  }
-
-
+    mute = !mute;
+    if (mute === true) {
+        for (let i=0;i < chimesArray.length; i++){
+            chimesArray[i].selfSound.pause();
+            chimesArray[i].impactSound.pause();
+        } 
+    }
 }); //end mute button
 
 
 //feature that goes thru the plate style options
 changePlateLookButton.addEventListener("click", function (event) {
-
-
-
-  plateLookIndex++;
-
-  if (plateLookIndex === plateLookArray.length){
-    plateLookIndex =0;
-  };
-
-  topPlate.currentLook = plateLookArray[plateLookIndex];
-topPlate.element.innerHTML= topPlate.currentLook;
-
-
-
+    plateLookIndex++;
+    if (plateLookIndex === plateLookArray.length){
+        plateLookIndex =0;
+    };
+    topPlate.currentLook = plateLookArray[plateLookIndex];
+    topPlate.element.innerHTML= topPlate.currentLook;
 });//end change border button
 
 
 //feature that goes through the pattern
 patternChangeButton.addEventListener("click", function (event){
-
-
-
   patternCurrentIndex++;
-
   if (patternCurrentIndex === patternArray.length ){
     patternCurrentIndex =0;
   }
-  console.log(patternArray[patternCurrentIndex]);
-
-
-
 });
 
 print();
 
 
 
-  function animate() {
+function animate() {
     //applications of the properties adapted to diff events and contexts
-
-
-
-
-patternArray[patternCurrentIndex]();
-
+    patternArray[patternCurrentIndex]();
     //a vertical vectorial force
     let gravity = new p5.Vector(0, 0.009);
-
-//activation of constructor's functions
+    //activation of constructor's functions
     for (let i = 0; i < chimesArray.length; i++) {
       chimesArray[i].updateVectors(true);
-
       chimesArray[i].show();
       chimesArray[i].update(true);
       chimesArray[i].checkEdges();
@@ -606,21 +533,15 @@ patternArray[patternCurrentIndex]();
     topPlate.show();
     topPlate.checkEdges();
 
-
-
     //toggling between the "mode" button (user force mode)
     if (toggle === false) {
-
       //maps userforce to mic input data
       windForce = userForce;
-
       let windisActive = false;
       let newWindForce = new p5.Vector(.9, 0);
-      //
 
       //user input force becomes the wind
       for (let i = 0; i < chimesArray.length; i++) {
-
         let chimeX = chimesArray[i].pos.x;
         let difference = mx - chimeX;
 
@@ -629,90 +550,58 @@ patternArray[patternCurrentIndex]();
           chimesArray[i].windX = wind.x;
           chimesArray[i].applyForce(newWindForce);
 
-
           if (i === 0) {
             topPlate.applyForce(newWindForce);
             windisActive = true;
           }
-
-
         } else if (difference < 0) {
-          wind = new p5.Vector(windForce, 0);
-          chimesArray[i].windX = wind.x;
-
-          if (timeoutWind === false) {
+            wind = new p5.Vector(windForce, 0);
+            chimesArray[i].windX = wind.x;
+            
+            if (timeoutWind === false) {
             chimesArray[i].applyForce(newWindForce);
-
-          }
-
-
-          if (i === 0 && timeoutWind === false) {
+            }
+            if (i === 0 && timeoutWind === false) {
             topPlate.applyForce(newWindForce);
             windisActive = true;
-          }
-
+            }
         } //diff
-
-
-
       } //end of for loop
 
       if (windisActive === true && timeoutWind === false) {
-
-
-
         setTimeout(function () {
           startDrag = true;
         }, 2000);
-
-
         setTimeout(function () {
           timeoutWind = false;
           console.log("time out wind");
         }, 5000);
-
         timeoutWind = true;
-
       }
     } //end of if Toggle
-
-    bang();
-
-
-
+    // bang();
     window.requestAnimationFrame(animate)
   }
 
   function print() {
-
-
-
+    console.log(currentSelfSoundMode)
     currentForceModeTextZone.innerHTML = forceMode;
     angleVelLevelText.innerHTML = angleVelLevel;
     soundModeText.innerHTML = currentSelfSoundMode;
-    console.log(currentSelfSoundMode)
-    forceInstructionText.innerHTML = currentForceInstructionText;
+    // console.log(currentSelfSoundMode)
+    // forceInstructionText.innerHTML = currentForceInstructionText;
     angleVelLevelText.innerHTML = angleVelLevel;
     forceLevelTextZone.innerHTML = windForce;
-
-
-    
   }
 
   function micInput() {
     //https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API and Sabine's help
     //librairy web audio
-
-
-
-
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
     let audioContext = new AudioContext();
-
     navigator.mediaDevices.getUserMedia({
         audio: true
-      })
-      .then(
+      }).then(
         //stream is what is returned
         (stream) => {
           //returns a MediaStreamAudioSourceNode.
@@ -755,87 +644,60 @@ patternArray[patternCurrentIndex]();
         /* handle the error */
         console.log("NO SOUND DETECTED");
       });
- 
- 
- 
     }
 
 
 //wind sensitivity slider
-  function slider() {
-
-
-
-    for (let i = 0; i < chimesArray.length; i++) {
-      chimesArray[i].currentAngleVel = angleVelLevel;
-    }
-  
-  
-  
-  }
-
-
+//   function slider() {
+//     for (let i = 0; i < chimesArray.length; i++) {
+//       chimesArray[i].currentAngleVel = angleVelLevel;
+//     }  
+//   }
 
   //sound of chimes triggered by movement or collision of 2 chimes obj
   function bang() {
-
-
-
-//activation of selfSound by movement (calculated w velocity)
-if (mute === false){
-
-for (let i = 0; i < chimesArray.length; i++) {
-      if (chimesArray[i].angleVel > Math.abs(0.003)) {
-        chimesArray[i].isChiming();
-      }
-    }
-
-//activation of impactSound by detection of collision between 2 chimes 
-    for (let i = 0; i < chimesArray.length; i++) {
-      // chimesArray[i].impact= false;
-      if (chimesArray[i].isColliding === true) {
-        if (chimesArray[i].impactSound.paused) {
-          // console.log(`DONE`);
-          chimesArray[i].isColliding = false;
-        }
-      }
-    }
-
-    // calculating collision thru difference
-    for (let i = 0; i < chimesArray.length; i++) {
-      for (let j = 0; j < chimesArray.length; j++) {
-        let chimeX = chimesArray[i].pos.x;
-        if (chimesArray[i] !== chimesArray[j]) {
-          let otherChimeX = (chimesArray[j].pos.x);
-          let difference = Math.sqrt(Math.pow((chimesArray[j].pos.x - chimesArray[i].pos.x), 2) + Math.pow((chimesArray[j].pos.y - chimesArray[i].pos.y), 2));
-
-    //determines if there is collision or not between 2 chimes objs
-          if (difference < 100) {
-            chimesArray[i].impact = true;
-            chimesArray[j].impact = true;
-
-            if (chimesArray[j].isColliding === false) {
-              chimesArray[j].inCollision();
-              chimesArray[j].isColliding = true;
+    //activation of selfSound by movement (calculated w velocity)
+        if (!mute){
+            for (let i = 0; i < chimesArray.length; i++) {
+                if (chimesArray[i].angleVel > Math.abs(0.003)) {
+                    chimesArray[i].isChiming();
+                }
+            }
+            //activation of impactSound by detection of collision between 2 chimes 
+            for (let i = 0; i < chimesArray.length; i++) {
+                // chimesArray[i].impact= false;
+                if (chimesArray[i].isColliding === true) {
+                    if (chimesArray[i].impactSound.paused) {
+                        // console.log(`DONE`);
+                        chimesArray[i].isColliding = false;
+                    }
+                }
             }
 
-            if (chimesArray[i].isColliding === false) {
-              chimesArray[i].inCollision();
-              chimesArray[i].isColliding = true;
+        // calculating collision thru difference
+            for (let i = 0; i < chimesArray.length; i++) {
+                for (let j = 0; j < chimesArray.length; j++) {
+                    let chimeX = chimesArray[i].pos.x;
+                    if (chimesArray[i] !== chimesArray[j]) {        
+                        let otherChimeX = (chimesArray[j].pos.x);
+                        let difference = Math.sqrt(Math.pow((chimesArray[j].pos.x - chimesArray[i].pos.x), 2) + Math.pow((chimesArray[j].pos.y - chimesArray[i].pos.y), 2));
+
+                        //determines if there is collision or not between 2 chimes objs
+                        if (difference < 100) {
+                            chimesArray[i].impact = true;
+                            chimesArray[j].impact = true;
+                            if (chimesArray[j].isColliding === false) {
+                                chimesArray[j].inCollision();
+                                chimesArray[j].isColliding = true;
+                            }
+                            if (chimesArray[i].isColliding === false) {
+                                chimesArray[i].inCollision();
+                                chimesArray[i].isColliding = true;
+                            }
+                        }
+                    }
+                }
             }
-
-
-
-          }
         }
-      }
-    }
-
-
-
-  }
-} 
-
-
-
+    } 
 } //end window on load
