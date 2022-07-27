@@ -23,6 +23,11 @@ header {
   flex-direction: column;
   justify-content: center;
 }
+@media (max-width: 1365px) {
+  header {
+    height: 20vh;
+  }
+}
 @media (min-width: 1366px) {
   header {
     margin-left: 8%;
@@ -209,6 +214,7 @@ main {
   flex-grow: 1;
 }
 main #windchimeBox {
+  height: 80vh;
   position: relative;
   min-width: 100vw;
 }
@@ -216,6 +222,7 @@ main #plate {
   margin: 0;
   position: absolute;
   top: 0 !important;
+  width: 120vw;
   width: 100%;
   color: black;
   text-align: center;
