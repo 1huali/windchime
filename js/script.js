@@ -307,11 +307,21 @@ window.onload = function() {
   let dustSound2 = document.getElementById(`dustSound2`);
   let bambooSound = document.getElementById(`bambooSound`);
   let bambooSound2 = document.getElementById(`bambooSound2`);
+  let thunderSound = document.getElementById(`thunderSound`);
+  let thunderSound2 = document.getElementById(`thunderSound2`);
+  let coinSound = document.getElementById(`coinSound`);
+  let coinSound2 = document.getElementById(`coinSound2`);
+
+
 
   selfSoundArray.push(dustSound);
   impactSoundArray.push(dustSound2);
   selfSoundArray.push(bambooSound);
   impactSoundArray.push(bambooSound2);
+  selfSoundArray.push(thunderSound);
+  impactSoundArray.push(thunderSound2);
+  selfSoundArray.push(coinSound);
+  impactSoundArray.push(coinSound2);
   let currentSoundModeIndex = 0;
 
 
