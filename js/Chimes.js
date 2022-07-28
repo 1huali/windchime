@@ -177,4 +177,12 @@ class Chimes{
 
         }
 
+        setStringLook(stringForm){
+           
+            this.chimeStringText = stringForm;
+            console.log(stringForm,this.element.innerText);
+            this.element.textContent= stringForm;
+
+        }
+
         } //end of class

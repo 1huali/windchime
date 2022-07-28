@@ -104,15 +104,15 @@ console.log(stringFormArray);
 
   //   (plate look)
   let changePlateLookButton = document.getElementById(`plateButton`);
-  let currentPlateLook = `----------------------------top-plate-----------------------------------`;
+  let currentPlateLook = `---------------------------top-frame ---------------------------`;
   let plateLookArray = [];
   let plateLookIndex = 0;
   plateLookArray.push(`━━━━━━━━━━━━━༺✧༻━━━━━━━━━━━━━`);
-  plateLookArray.push(`━━━━━━━⭑*•̩̩͙♩⊱••••♫••••̩̩͙⊰•♪*⭑━━━━━━━`)
+  plateLookArray.push(`━━━━━━━⭑*•̩̩͙♩⊱bling•♫•bling••̩̩͙⊰•♪*⭑━━━━━━━`)
   plateLookArray.push(`━━━━━⋆┈┈｡ﾟ❃ུ۪ ❀ུ۪ ❁ུ۪ ❃ུ۪ ❀ུ۪ ﾟ｡┈┈⋆━━━━━`)
   plateLookArray.push(`━━━━━━━━━━━━━༺❀༻━━━━━━━━━━━━━`);
-  plateLookArray.push(`·͙*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧͙ 　　.·͙*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧͙ .`);
-  plateLookArray.push(`----------------------------top-plate-----------------------------------`);
+  plateLookArray.push(`·*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　z*̩̩̥͙zZ*̩̩͙‧͙.·͙*̩̩͙Zz*̩̩̥͙z ✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧.`);
+  plateLookArray.push(`--------------------------- top-frame ---------------------------`);
 
 
 
@@ -184,27 +184,28 @@ console.log(stringFormArray);
 
   let chime8 = new Chimes(stringchime8, document.getElementById(`chime8`), start2X + offset2X, start2Y + stringUnit, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
   let chime9 = new Chimes(stringchime9, document.getElementById(`chime9`), start2X + offset2X, start2Y - stringUnit, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
-  let chime10 = new Chimes(stringchime10, document.getElementById(`chime10`), start2X + (2 * offset2X), start2Y + (1.5 * stringUnit), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
-  let chime11 = new Chimes(stringchime11, document.getElementById(`chime11`), start2X + (2 * offset2X), start2Y - (1.5 * stringUnit), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
-  let chime12 = new Chimes(stringchime11, document.getElementById(`chime12`), start2X + (3 * offset2X), start2Y + (2 * stringUnit), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
-  let chime13 = new Chimes(stringchime11, document.getElementById(`chime13`), start2X + (3 * offset2X), start2Y - (2 * stringUnit), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
-  let chime14 = new Chimes(stringchime14, document.getElementById(`chime14`), start2X + (4 * offset2X), start2Y + (2.5 * stringUnit), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
-  let chime15 = new Chimes(stringchime15, document.getElementById(`chime15`), start2X + (4 * offset2X), start2Y - (2.5 * stringUnit), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
-  let chime16 = new Chimes(stringchime16, document.getElementById(`chime16`), start2X + (2.5 * offset2X), start2Y + (4 * stringUnit), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
+  let chime10 = new Chimes(stringchime10, document.getElementById(`chime10`), start2X + (2 * offset2X+20), start2Y + (1.5 * stringUnit+15), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
+  let chime11 = new Chimes(stringchime11, document.getElementById(`chime11`), start2X + (2 * offset2X+20), start2Y - (1.5 * stringUnit+15), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
+  let chime12 = new Chimes(stringchime11, document.getElementById(`chime12`), start2X + (3 * offset2X+30), start2Y + (2 * stringUnit+20), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
+  let chime13 = new Chimes(stringchime11, document.getElementById(`chime13`), start2X + (3 * offset2X+30), start2Y - (2 * stringUnit+20), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
+  let chime14 = new Chimes(stringchime14, document.getElementById(`chime14`), start2X + (4 * offset2X+40), start2Y + (2.5 * stringUnit+25), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
+  let chime15 = new Chimes(stringchime15, document.getElementById(`chime15`), start2X + (4 * offset2X+40), start2Y - (2.5 * stringUnit+25), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
+  let chime16 = new Chimes(stringchime16, document.getElementById(`chime16`), start2X + (2.5 * offset2X+25), start2Y + (40+ stringUnit), document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
 
   //pattern 3
   let start3X = window.innerWidth / 2;
   let start3Y = topY + stringUnit * 4;
-  let chime17 = new Chimes(stringchime17, document.getElementById(`chime17`), start3X, start3Y + 300, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
+  let chime17 = new Chimes(stringchime17, document.getElementById(`chime17`), start3X, start3Y + 300/2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit-70);
 
-  let chime18 = new Chimes(stringchime18, document.getElementById(`chime18`), start3X - 100, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
-  let chime19 = new Chimes(stringchime19, document.getElementById(`chime19`), start3X + 100, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
-  let chime20 = new Chimes(stringchime18, document.getElementById(`chime20`), start3X - 200, start3Y - 100, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
-  let chime21 = new Chimes(stringchime21, document.getElementById(`chime21`), start3X + 200, start3Y - 100, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
-  let chime22 = new Chimes(stringchime22, document.getElementById(`chime22`), start3X - 300, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
-  let chime23 = new Chimes(stringchime23, document.getElementById(`chime23`), start3X + 300, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
+  let chime18 = new Chimes(stringchime18, document.getElementById(`chime18`), start3X - 100/2, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit+70);
+  let chime19 = new Chimes(stringchime19, document.getElementById(`chime19`), start3X + 100/2, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit+70);
+  let chime20 = new Chimes(stringchime18, document.getElementById(`chime20`), start3X - 200/2, start3Y - 100/2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit+70);
+  let chime21 = new Chimes(stringchime21, document.getElementById(`chime21`), start3X + 200/2, start3Y - 100/2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit+70);
+  let chime22 = new Chimes(stringchime22, document.getElementById(`chime22`), start3X - 300/2, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit+70);
+  let chime23 = new Chimes(stringchime23, document.getElementById(`chime23`), start3X + 300/2, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit+70);
 
-  let chime24 = new Chimes(stringchime24, document.getElementById(`chime24`), start3X, start3Y - 200, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
+  //enlever chime24
+  let chime24 = new Chimes(stringchime24, document.getElementById(`chime24`), start3X, start3Y - 200/2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 10, stringUnit+70);
 
 
   function pattern1() {
@@ -575,8 +576,8 @@ changeStringButton.addEventListener("click", function (event){
   if (stringFormIndex === stringFormArray.length) {
     stringFormIndex = 0;
   }
-  // for (let j = 0; j < stringArray.length; j++) {
-  //   stringArray[j].setChimeStringLook(stringFormArray[stringFormIndex]);
+  // for (let j = 0; j < stringLookArray.length; j++) {
+  //   stringLookArray[j].setStringLook(stringFormArray[stringFormIndex]);
   //creer chime string look function dans constructeur
   // };
   print();
