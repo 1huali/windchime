@@ -16,6 +16,10 @@ window.onload = function() {
   let clicks = 0;
   let windForce = 0;
 
+// ADD-ON JULY 28TH
+let lightButton = document.getElementById(`lightButton`);
+//
+
   //to control the mic event
   let timeoutWind = false;
 
@@ -46,14 +50,14 @@ window.onload = function() {
   let forceLevelTextZone = document.getElementById(`forceLevelBox`);
   let currentForceLevelText = ``;
 
-  //changing chime appearence
-  let chimeLookArray = [];
+  //calling a list of chime looks
+  // let chimeLookArray = [];
   let currentLookIndex = 0;
   let currentLook = "chimeLook1";
-  chimeLookArray.push("chimeLook1");
-  chimeLookArray.push("chimeLook2");
-  chimeLookArray.push("chimeLook3");
-  chimeLookArray.push("chimeLook4");
+  // chimeLookArray.push("chimeLook1");
+  // chimeLookArray.push("chimeLook2");
+  // chimeLookArray.push("chimeLook3");
+  // chimeLookArray.push("chimeLook4");
 
   // let changeChimesFormButton = document.getElementById(`formButton`);
 
@@ -63,12 +67,39 @@ window.onload = function() {
   let chimeFormArray = [];
   let chimeFormIndex = 0;
   //change to chimeLook wtv
-  let currentChimeForm = ` ✿`
-  chimeFormArray.push(` ✧`);
-  chimeFormArray.push(` ❀`);
-  chimeFormArray.push(` ♡`);
-  chimeFormArray.push(` ch!me`);
-  chimeFormArray.push(` ♫`);
+  let currentChimeForm = `✿`
+  chimeFormArray.push(`✧`);
+  chimeFormArray.push(`❀`);
+  chimeFormArray.push(`♡`);
+  chimeFormArray.push(`chime`);
+  chimeFormArray.push(`♫`);
+
+
+
+  // ADD-ON JULY 28TH
+  //calling a list of string look
+  let stringLookArray = [];
+  let currentStringLookIndex = 0;
+  let currentStringLook = "stringLook1";
+stringLookArray.push("stringLook1");
+ stringLookArray.push("stringLook2");
+
+  // let changeChimesFormButton = document.getElementById(`formButton`);
+
+  //implementation of look variations
+  //   (string elements)
+  let changeStringButton = document.getElementById('stringButton');
+  let stringFormArray = [];
+  let stringFormIndex = 0;
+
+  stringFormArray.push(`|`);
+  stringFormArray.push(`string`);
+console.log(stringFormArray);
+
+  // END ADD-ON
+
+
+
 
 
   //   (plate look)
@@ -114,9 +145,11 @@ window.onload = function() {
   let stringchime23 = document.getElementById(`string23`);
   let stringchime24 = document.getElementById(`string24`);
 
+  //ADD-ON JULY 28th
   let stringElements = document.getElementsByClassName("strings");
   let chimesElements = document.getElementsByClassName("mass");
-
+  let cssBodyColor = document.getElementsByClassName("body");
+//
 
 
 
@@ -135,13 +168,13 @@ window.onload = function() {
   let windBoxRatio12th = windchimeWidth / 8;
 
 
-  let chime0 = new Chimes(stringchime0, document.getElementById(`chime0`), window.innerWidth / 2, topY + stringUnit * 2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 0, stringUnit * 6);
-  let chime1 = new Chimes(stringchime1, document.getElementById(`chime1`), window.innerWidth / 2 - windBoxRatio5th, topY + stringUnit * 4, document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 1000, stringUnit * 4);
-  let chime2 = new Chimes(stringchime2, document.getElementById(`chime2`), window.innerWidth / 2 + windBoxRatio12th, topY + stringUnit * 2.5, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit * 2.5);
-  let chime3 = new Chimes(stringchime3, document.getElementById(`chime3`), window.innerWidth / 2 - windBoxRatio12th, topY + stringUnit * 2.5, document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 500, stringUnit * 2.5);
-  let chime4 = new Chimes(stringchime4, document.getElementById(`chime4`), window.innerWidth / 2 + windBoxRatio5th, topY + stringUnit * 4, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 4);
-  let chime5 = new Chimes(stringchime5, document.getElementById(`chime5`), window.innerWidth / 2 + windBoxRatio7th, topY + stringUnit * 3, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3);
-  let chime6 = new Chimes(stringchime6, document.getElementById(`chime6`), window.innerWidth / 2 - windBoxRatio7th, topY + stringUnit * 3, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3);
+  let chime0 = new Chimes(stringchime0, document.getElementById(`chime0`), window.innerWidth / 2, topY + stringUnit * 2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 0, stringUnit * 6,currentStringLook);
+  let chime1 = new Chimes(stringchime1, document.getElementById(`chime1`), window.innerWidth / 2 - windBoxRatio5th, topY + stringUnit * 4, document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 1000, stringUnit * 4,currentStringLook);
+  let chime2 = new Chimes(stringchime2, document.getElementById(`chime2`), window.innerWidth / 2 + windBoxRatio12th, topY + stringUnit * 2.5, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit * 2.5,currentStringLook);
+  let chime3 = new Chimes(stringchime3, document.getElementById(`chime3`), window.innerWidth / 2 - windBoxRatio12th, topY + stringUnit * 2.5, document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 500, stringUnit * 2.5,currentStringLook);
+  let chime4 = new Chimes(stringchime4, document.getElementById(`chime4`), window.innerWidth / 2 + windBoxRatio5th, topY + stringUnit * 4, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 4,currentStringLook);
+  let chime5 = new Chimes(stringchime5, document.getElementById(`chime5`), window.innerWidth / 2 + windBoxRatio7th, topY + stringUnit * 3, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3,currentStringLook);
+  let chime6 = new Chimes(stringchime6, document.getElementById(`chime6`), window.innerWidth / 2 - windBoxRatio7th, topY + stringUnit * 3, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3,currentStringLook);
 
   // pattern 2 setups
   let start2X = window.innerWidth / 4;
@@ -329,8 +362,9 @@ window.onload = function() {
   let muteButton = document.getElementById(`muteButton`);
   let mute = false;
 
-
-
+  // ADD-ON JULY 28TH
+let lightOn = false;
+//
 
   window.requestAnimationFrame(animate)
   //new properties adapted to diff events and contexts.
@@ -524,7 +558,33 @@ window.onload = function() {
 
   print();
 
+// ADD-ON JULY 28TH (help)
+lightButton.addEventListener("click",function(event){
+lightOn = !lightOn;
+if (lightOn){
+chimesElements.style.color="#FFF";
+} else {
+  chimesElements.style.color="#000";
+}
+});
 
+
+changeStringButton.addEventListener("click", function (event){
+
+  stringFormIndex++;
+  if (stringFormIndex === stringFormArray.length) {
+    stringFormIndex = 0;
+  }
+  // for (let j = 0; j < stringArray.length; j++) {
+  //   stringArray[j].setChimeStringLook(stringFormArray[stringFormIndex]);
+  //creer chime string look function dans constructeur
+  // };
+  print();
+console.log('currentStringLook')
+
+});
+
+//
 
   function animate() {
     //applications of the properties adapted to diff events and contexts
