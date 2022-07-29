@@ -2,7 +2,7 @@ class Chimes{
     //https://www.youtube.com/watch?v=NBWMtlbbOag
 
 
-            constructor(stringChime,el,x,y,selfSound,impactSound,currentLook, chimeText,delayInterval,stringLength){
+            constructor(stringChime,el,x,y,selfSound,impactSound,currentLook, chimeText,delayInterval,stringLength, currentStringLook){
                 
                 //needs to be in vector, not a unidimensional parameter
                 this.pos = new p5.Vector(x,y);
@@ -39,6 +39,7 @@ class Chimes{
 
                 this.chimeText = chimeText;
                 this.currentLook = currentLook;
+                this.currentStringLook = currentStringLook;
                 this.element.classList.add(this.currentLook);
                 this.element.textContent = this.chimeText;
                 this.element.style.display= "block";
@@ -173,6 +174,14 @@ class Chimes{
             this.chimeText = form;
             console.log(form,this.element.innerText);
             this.element.textContent= form;
+
+        }
+
+        setStringLook(stringForm){
+           
+            this.chimeStringText = stringForm;
+            console.log(stringForm,this.element.innerText);
+            this.element.textContent= stringForm;
 
         }
 
