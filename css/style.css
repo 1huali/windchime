@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
-  color: #278eee;
-  background-color: aqua;
 }
 
 html {
@@ -16,7 +15,16 @@ body {
   position: relative;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+}
+@media (max-width: 1365px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+.--dark {
+  color: #FFFFFF;
+  background-color: #000000;
 }
 
 header {
@@ -24,6 +32,11 @@ header {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+@media (max-width: 1365px) {
+  header {
+    height: 20vh;
+  }
 }
 @media (min-width: 1366px) {
   header {
@@ -42,6 +55,11 @@ h1 {
     font-size: 3rem;
   }
 }
+@media (min-width: 1366px) {
+  h1 {
+    margin-top: 0;
+  }
+}
 
 .databox {
   width: 100%;
@@ -58,7 +76,7 @@ h1 {
   .databox {
     margin: auto;
     width: 85%;
-    max-width: 37.5rem;
+    max-width: 30rem;
   }
 }
 @media (min-width: 481px) {
@@ -95,12 +113,12 @@ h1 {
 }
 @media (min-width: 768px) and (max-width: 1365px) {
   .databox {
-    width: 40rem;
+    width: 32rem;
   }
 }
 @media (min-width: 991px) {
   .databox {
-    width: 50rem;
+    width: 40rem;
   }
 }
 @media (min-width: 1366px) {
@@ -111,16 +129,11 @@ h1 {
 @media (max-width: 767px) {
   .databox .data {
     margin: 0.25rem;
-  }
-}
-@media (max-width: 480px) {
-  .databox .data {
     width: calc(25% - 0.5rem);
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
   .databox .data {
-    width: calc(20% - 0.5rem);
     max-width: 7rem;
   }
 }
@@ -190,6 +203,11 @@ h1 {
     width: 10rem;
   }
 }
+.databox .data .--dark {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
 .databox .data__value {
   margin: 0;
 }
@@ -211,21 +229,22 @@ main {
   flex-grow: 1;
 }
 main #windchimeBox {
+  height: 80vh;
   position: relative;
-  min-width: 100vw;
+  min-width: 100%;
 }
-main #plate {
+main .plate {
   margin: 0;
   position: absolute;
-  top: 0 !important;
+  top: 0;
+  width: 120vw;
   width: 100%;
-  color: #278eee;
   text-align: center;
   max-width: 100vw;
   font-size: 2rem;
 }
 @media (max-width: 480px) {
-  main #plate {
+  main .plate {
     font-size: 1rem;
   }
 }
@@ -240,34 +259,17 @@ main .strings {
   }
 }
 main .mass {
-  color: #278eee;
   font-size: 4em;
   position: absolute;
   height: 10vw;
   width: 10vw;
   display: none;
 }
-
-
 @media (max-width: 480px) {
   main .mass {
     height: 5vw;
     width: 5vw;
   }
 }
-
-/* disabled function */
-.chimeLook1 {
-  color: rgb(0, 0, 0);
-}
-
-.chimeLook2 {
-  color: rgb(240, 166, 218);
-}
-
-.chimeLook3 {
-  color: rgb(249, 67, 67);
-}
-/* disabled function */
 
 /*# sourceMappingURL=style.css.map */
