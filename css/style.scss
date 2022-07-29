@@ -1,7 +1,7 @@
 @import './utiles.scss',
 './colors.scss';
-
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -16,7 +16,14 @@ body {
     position: relative;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    @include tablet-and-less {
+        flex-direction: column;
+    }
+}
+
+.body--dark {
+    color: #FFFFFF;
+    background-color: #000000;
 }
 
 header {
@@ -34,8 +41,8 @@ header {
 }
 
 h1 {
-    font-size:2rem;
-    text-align:center;
+    font-size: 2rem;
+    text-align: center;
     font-weight: 500;
     @include large-tablet-and-more {
         font-size: 3rem;
@@ -60,12 +67,12 @@ h1 {
     @include small-tablet {
         margin: auto;
         width: 85%;
-        max-width: calc($button-width-tablet * 5 + $data-margin-mobile * 10);
+        max-width: calc($button-width-tablet * 4 + $data-margin-mobile * 8);
     }
     @include small-tablet-and-more {
         & .force {
             order: 1;
-        } 
+        }
         & .input {
             order: 2;
         }
@@ -80,7 +87,7 @@ h1 {
         }
         & .pattern {
             order: 6;
-        } 
+        }
         & .plate {
             order: 7;
         }
@@ -94,43 +101,11 @@ h1 {
             order: 10;
         }
     }
-    // @include desktop {
-    //     & .force {
-    //         order: 1;
-    //     } 
-    //     & .input {
-    //         order: 3;
-    //     }
-    //     & .mode {
-    //         order: 9;
-    //     }
-    //     & .sensitivity {
-    //         order: 2;
-    //     }
-    //     & .mute {
-    //         order: 10;
-    //     }
-    //     & .pattern {
-    //         order: 4;
-    //     } 
-    //     & .plate {
-    //         order: 7;
-    //     }
-    //     & .string {
-    //         order: 8;
-    //     }
-    //     & .look {
-    //         order: 9;
-    //     }
-    //     & .sound {
-    //         order: 5;
-    //     }
-    // }
     @include tablet {
-        width: calc($button-width-tablet * 5 + $data-margin-tablet * 10);
+        width: calc($button-width-tablet * 4 + $data-margin-tablet * 8);
     }
     @include large-tablet-and-more {
-        width: calc($button-width-large-tablet * 5 + $data-margin-tablet * 10);
+        width: calc($button-width-large-tablet * 4 + $data-margin-tablet * 8);
     }
     @include desktop {
         width: 100%;
@@ -145,8 +120,8 @@ h1 {
         @include small-tablet {
             width: calc(20% - 2 * $data-margin-mobile);
             max-width: $button-width-tablet;
-        }   
-        @include tablet{
+        }
+        @include tablet {
             margin: $data-margin-tablet;
             width: $button-width-tablet;
         }
@@ -160,8 +135,8 @@ h1 {
             margin-top: $data-margin-desktop;
             width: 24rem;
         }
-
-        &__button, &__value {
+        &__button,
+        &__value {
             box-sizing: border-box;
             width: 100%;
             height: 1.5rem;
@@ -170,7 +145,7 @@ h1 {
             align-items: center;
             font-size: 11px;
             font-family: 'Inter', sans-serif;
-            @include tablet{
+            @include tablet {
                 font-size: 13px;
             }
             @include large-tablet {
@@ -191,11 +166,16 @@ h1 {
             padding: 0;
             margin: 0;
             &:focus {
-                outline: 1.5px solid #000000 ;
+                outline: 1.5px solid #000000;
             }
             @include desktop {
                 width: $button-width-desktop;
             }
+        }
+        & .--dark {
+            background-color: #000000;
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
         }
         &__value {
             margin: 0;
@@ -214,17 +194,18 @@ h1 {
 
 main {
     flex-grow: 1;
-    & #windchimeBox { 
+    & #windchimeBox {
         height: 80vh;
         position: relative;
-        min-width:100vw;
+        min-width: 100%;
+        @include tablet-and-less {}
     }
-    & #plate {
+    & .plate {
         margin: 0;
-        position:absolute;
-        top: 0!important;
-        width: 120vw; 
-        width: 100%; 
+        position: absolute;
+        top: 0;
+        width: 120vw;
+        width: 100%;
         color: black;
         text-align: center;
         max-width: 100vw;
@@ -232,31 +213,30 @@ main {
         @include mobile {
             font-size: 1rem;
         }
-        @include small-tablet {
-
-        }
+        @include small-tablet {}
     }
-
     & .strings {
         position: absolute;
-        display:none;
+        display: none;
         font-size: 3rem;
         @include mobile {
             font-size: 1rem;
         }
     }
-
     & .mass {
         color: rgb(0, 0, 0);
         font-size: 4em;
-        position:absolute;
+        position: absolute;
         height: 10vw;
         width: 10vw;
-        display:none;
+        display: none;
         @include mobile {
             height: 5vw;
             width: 5vw;
         }
+    }
+    & .--dark {
+        color: #FFFFFF;
     }
 }
 
@@ -270,22 +250,19 @@ main {
 //     -webkit-transition: .2s;
 //     transition: opacity .2s;
 // }
-
 // .slider:hover {
 //     opacity: 1;
 // }
-
-.chimeLook1{
-    color:rgb(0, 0, 0);
+.chimeLook1 {
+    color: rgb(0, 0, 0);
 }
 
 .chimeLook2 {
-    color:rgb(240, 166, 218);  
+    color: rgb(240, 166, 218);
 }
-  
+
 .chimeLook3 {
-    color:rgb(249, 67, 67);
-    
+    color: rgb(249, 67, 67);
 }
 
 // #dataBox{
@@ -295,7 +272,6 @@ main {
 //     align-content: space-between;
 //     border: 1em;
 // }
-
 // .dataContentBox {
 //     display: inline-block;
 //     border-style: double;

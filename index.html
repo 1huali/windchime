@@ -1,111 +1,90 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Wind chime system - Wawa Li</title>
-        <!-- <i>Wawa Li</i> -->
-        <audio controls hidden id="bambooSound">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind chime system - Wawa Li</title>
+    <!-- <i>Wawa Li</i> -->
+    <audio controls hidden id="bambooSound">
         <source src="assets/sounds/bamboo-chime.mp3" type="audio/mpeg">
         </audio>
-        <audio controls hidden id="bambooSound2">
+    <audio controls hidden id="bambooSound2">
         <source src="assets/sounds/bamboo2-chime.mp3" type="audio/mpeg">
         </audio>
-        <audio controls hidden id="coinSound">
+    <audio controls hidden id="coinSound">
         <source src="assets/sounds/coin-chime.mp3" type="audio/mpeg">
         </audio>
-        <audio controls hidden id="coinSound2">
+    <audio controls hidden id="coinSound2">
         <source src="assets/sounds/coin2-chime.mp3" type="audio/mpeg">
         </audio>
-        <audio controls hidden id="dustSound">
+    <audio controls hidden id="dustSound">
         <source src="assets/sounds/dust-chime.mp3" type="audio/mpeg">
         </audio>
-        <audio controls hidden id="dustSound2">
+    <audio controls hidden id="dustSound2">
         <source src="assets/sounds/dust2-chime.mp3" type="audio/mpeg">
         </audio>
 
-        <link rel="stylesheet" type="text/css" href="./css/style.css" />
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
-        <script src="js/libraries/jquery-ui.js"></script> 
-        <script src="js/libraries/p5.min.js"></script>
-        <script src="js/libraries/p5.sound.min.js"></script>
-        <script src="js/test.js"></script>
-    </head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/libraries/jquery-ui.js"></script>
+    <script src="js/libraries/p5.min.js"></script>
+    <script src="js/libraries/p5.sound.min.js"></script>
+    <script src="js/test.js"></script>
+    <script src="js/const.js"></script>
+    <script src="js/matchMedia.js"></script>
+</head>
 
-    <body>
-        <header>
-            <h1> <b>wind chime</b> system</h1>
-            <div class="databox" id="instructionDiv">
-                <div class="data force">
-                    <button class="data__button">wind force</button>
-                    <p class="data__value" id="forceLevelBox">0</p>
-                </div>
-                <div class="data input">
-                    <button class="data__button" id="inputButton">input type</button>
-                    <p class="data__value" id="currentForceMode">mouse</p>
-                </div>                
-                <div class="data sensitivity">
-                    <button class="data__button" id="sensitivityButton">sensitivity</button>
-                    <p class="data__value" id="sensitivityLevel">0</p>
-                </div>
-                <div class="data pattern">
-                    <button class="data__button"  id="patternButton">pattern</button>
-                    <p class="data__value">'mountain'</p>
-                </div>
-                <div class="data plate">
-                    <button class="data__button" id="plateButton">top plate</button>
-                    <p class="data__value"></p>
-                </div>
-                <div class="data string">
-                    <button class="data__button" id="stringButton">string</button>
-                    <p class="data__value"></p>
-                </div>
-                <div class="data look">
-                    <button class="data__button" id="lookButton">chimes</button>
-                    <p class="data__value"></p>
-                </div>
-                <div class="data sound">
-                    <button class="data__button" id="soundButton">sound</button>
-                    <p class="data__value" id="currentSound">'dustSound'</p>
-                </div>
-                <div class="data mode">
-                    <button class="data__button" id="modeButton">light : on </button>
-                    <p class="data__value"></p>
-                </div>
-                <div class="data mute">
-                    <button class="data__button" id="muteButton">mute : off</button>
-                    <p class="data__value"></p>
-                </div>
-                <!-- <section id="dataBox">
-                    <p class="dataContentBox">Wind Force : <span id="forceLevelBox"></span></p>
-                    <p class="dataContentBox">Force mode : <span id="currentForceMode"></span></p>    
-                    <p class="dataContentBox"> Sensitivity : 
-                        <input type="range" min="1" max="100" value="50" class="slider" id="angleVelSlider">
-                    <p class="dataContentBox">Level: <span id="sensitivityLevel"></span></p>
-                    <p class="dataContentBox">Sound : <span id="currentSound"></span></p>
-                </section>
-                <section id="dataBox">    
-                    <button class="dataContentBox" title="chimes visual" id="lookButton">Look</button>
-                    <button class="dataContentBox" title="user wind input" id="triggerButton">User force</button>
-                    <button class="dataContentBox" title="border decoration" id="plateButton">Change plate</button>    -->
-                    <!-- <button class="dataContentBox" title="chime form character" id="formButton">Color</button> -->
-                    <!-- <button class="dataContentBox" title="wind chime pattern" id="patternButton">Change pattern</button>
-                    <button class="dataContentBox" title="impact sound" id="soundButton">Sound</button>
-                </section> -->
-                <!-- <p style="font-size: 2.5em;"> Instruction: <span id="forceInstruction"> </span></p> -->
-                <!-- <button class="dataContentBox" title="mute sound" id="muteButton">Mute</button> -->
+<body class="">
+    <header>
+        <h1 class="h1"> <b>wind chime</b> system</h1>
+        <div class="databox" id="instructionDiv">
+            <div class="data input">
+                <button class="data__button button" id="triggerButton">input type</button>
+                <p class="data__value" id="currentForceMode">mouse</p>
             </div>
-        </header>
-        <main id="mainBox">
-            <div id="windchimeBox">
-            <p id="plate">-------------------------------------------------------------------------------------------------------------------</p>
-            <p id="stringBase"  style="text-align: center; position: relative;" class="strings">?</p>
+            <div class="data pattern">
+                <button class="data__button" id="patternButton">pattern</button>
+                <p class="data__value">'mountain'</p>
+            </div>
+            <div class="data plate">
+                <button class="data__button" id="plateButton">top plate</button>
+                <p class="data__value"></p>
+            </div>
+            <div class="data string">
+                <button class="data__button" id="stringButton">string</button>
+                <p class="data__value"></p>
+            </div>
+            <div class="data look">
+                <button class="data__button" id="lookButton">chimes</button>
+                <p class="data__value"></p>
+            </div>
+            <div class="data sound">
+                <button class="data__button" id="soundButton">sound</button>
+                <p class="data__value" id="currentSound">'dustSound'</p>
+            </div>
+            <div class="data mode">
+                <button class="data__button" id="modeButton">light</button>
+                <p class="data__value">on</p>
+            </div>
+            <div class="data mute">
+                <button class="data__button" id="muteButton">mute</button>
+                <p class="data__value">off</p>
+            </div>
+        </div>
+    </header>
+    <main id="mainBox">
+        <div id="windchimeBox">
+            <p id="plate" class="plate">-------------------------------------------------------------------------------------------------------------------</p>
+            <p id="stringBase" style="text-align: center; position: relative;" class="strings">?</p>
             <p id="stringBase" class="strings">string</p>
             <p id="string1" class="strings">string</p>
             <p id="chime1" class="mass"> <span id="chimeLook">chime1</span></p>
             <p id="string0" class="strings">string</p>
-            <h1><p id="chime0" style="font-style: italic;" class="mass">the core</h1></p>
+            <h1>
+                <p id="chime0" style="font-style: italic;" class="mass">the core</h1>
+            </p>
             <p id="string2" class="strings">string</p>
             <p id="chime2" class="mass"><span id="chimeLook">chime2</span></p>
             <p id="string3" class="strings">string</p>
@@ -135,9 +114,13 @@
             <p id="string15" class="strings">string</p>
             <p id="chime15" class="mass">chime15</p>
             <p id="string16" class="strings">string</p>
-            <h1><p id="chime16" class="mass">the core</p></h1>
+            <h1>
+                <p id="chime16" class="mass">the core</p>
+            </h1>
             <p id="string17" class="strings">string</p>
-                <h1><p id="chime17" class="mass">chime17</p></h1>
+            <h1>
+                <p id="chime17" class="mass">chime17</p>
+            </h1>
             <p id="string18" class="strings">string</p>
             <p id="chime18" class="mass">chime18</p>
             <p id="string19" class="strings">string</p>
@@ -156,11 +139,13 @@
             </h1>
         </div>
 
-        </main>
-        <!-- My script(s) -->
-        <script src="js/Chimes.js"> </script>
-        <script src="js/suspendorBase.js"> </script>
-        <script src="js/script.js"></script>
-    </body>
+    </main>
+    <!-- My script(s) -->
+    <script src="js/Chimes.js">
+    </script>
+    <script src="js/suspendorBase.js">
+    </script>
+    <script src="js/script.js"></script>
+</body>
 
 </html>

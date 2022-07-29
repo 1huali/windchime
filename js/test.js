@@ -1,8 +1,16 @@
 window.addEventListener('load', () => {
     // let body = document.querySelector('body');
-    // let html = document.querySelector('html');
-    // console.log(body);
-    // console.log(html.getBoundingClientRect());
-    // console.log(window.innerHeight);
-    // console.log(document.offsetWidth);
-})
+    // let buttons = document.querySelectorAll('button');
+    // console.log(buttons);
+    // let windChimeElements = [];
+    // windChimeElements = windChimeElements.concat(document.querySelectorAll('.mass'), document.querySelectorAll('#plate'), document.querySelectorAll('.strings'));
+    // body.classList.toggle('body--dark');
+    // buttons.forEach(button => {
+    //     button.classList.toggle('--dark');
+    // })
+    // windChimeElements.forEach(elements => {
+    //     elements.forEach(element => {
+    //         element.classList.toggle('--dark');
+    //     });
+    // });
+});
