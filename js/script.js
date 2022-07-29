@@ -543,7 +543,7 @@ window.onload = function() {
                     timeoutWind = true;
                 }
             } //end of if Toggle
-            // bang();
+            bang();
             window.requestAnimationFrame(animate)
         }
 

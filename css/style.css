@@ -194,9 +194,12 @@ h1 {
   border: 0;
   padding: 0;
   margin: 0;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
 }
-.databox .data__button:focus {
-  outline: 1.5px solid #000000;
+.databox .data__button:hover {
+  background-color: #000000;
+  color: #FFFFFF;
 }
 @media (min-width: 1366px) {
   .databox .data__button {
@@ -262,16 +265,8 @@ main .strings {
 main .mass {
   font-size: 4em;
   position: absolute;
-  height: 10vw;
-  width: 10vw;
   display: none;
   text-align: center;
-}
-@media (max-width: 480px) {
-  main .mass {
-    height: 5vw;
-    width: 5vw;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
