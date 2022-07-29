@@ -252,6 +252,7 @@ main .strings {
   position: absolute;
   display: none;
   font-size: 3rem;
+  text-align: center;
 }
 @media (max-width: 480px) {
   main .strings {
@@ -264,6 +265,7 @@ main .mass {
   height: 10vw;
   width: 10vw;
   display: none;
+  text-align: center;
 }
 @media (max-width: 480px) {
   main .mass {

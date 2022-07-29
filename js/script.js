@@ -59,17 +59,7 @@ window.onload = function() {
         chimeFormArray.push(`chime`);
         chimeFormArray.push(`♫`);
 
-
         let modeButton = document.getElementById(`modeButton`);
-
-
-        // ADD-ON JULY 28TH
-        //calling a list of string look
-        let stringLookArray = [];
-        let currentStringLookIndex = 0;
-        let currentStringLook = "stringLook1";
-        stringLookArray.push("stringLook1");
-        stringLookArray.push("stringLook2");
 
         // let changeChimesFormButton = document.getElementById(`formButton`);
 
@@ -78,15 +68,9 @@ window.onload = function() {
         let changeStringButton = document.getElementById('stringButton');
         let stringFormArray = [];
         let stringFormIndex = 0;
-
-        stringFormArray.push(`|`);
+        stringFormArray.push(`|<br>|<br>|<br>|<br>|`);
         stringFormArray.push(`string`);
         console.log(stringFormArray);
-
-        // END ADD-ON
-
-
-
 
 
         //   (plate look)
@@ -105,6 +89,7 @@ window.onload = function() {
 
 
         //html to js object definition
+
         let stringchime0 = document.getElementById(`string0`);
         let stringBase = document.getElementById(`stringBase`);
         let stringchime1 = document.getElementById(`string1`);
@@ -132,11 +117,10 @@ window.onload = function() {
         let stringchime23 = document.getElementById(`string23`);
         let stringchime24 = document.getElementById(`string24`);
 
-        //ADD-ON JULY 28th
         let stringElements = document.getElementsByClassName("strings");
         let chimesElements = document.getElementsByClassName("mass");
         let cssBodyColor = document.getElementsByClassName("body");
-        //
+        assignStringPattern();
 
 
 
@@ -155,13 +139,13 @@ window.onload = function() {
         let windBoxRatio12th = windchimeWidth / 8;
 
 
-        let chime0 = new Chimes(stringchime0, document.getElementById(`chime0`), window.innerWidth / 2, topY + stringUnit * 2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 0, stringUnit * 6, currentStringLook);
-        let chime1 = new Chimes(stringchime1, document.getElementById(`chime1`), window.innerWidth / 2 - windBoxRatio5th, topY + stringUnit * 4, document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 1000, stringUnit * 4, currentStringLook);
-        let chime2 = new Chimes(stringchime2, document.getElementById(`chime2`), window.innerWidth / 2 + windBoxRatio12th, topY + stringUnit * 2.5, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit * 2.5, currentStringLook);
-        let chime3 = new Chimes(stringchime3, document.getElementById(`chime3`), window.innerWidth / 2 - windBoxRatio12th, topY + stringUnit * 2.5, document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 500, stringUnit * 2.5, currentStringLook);
-        let chime4 = new Chimes(stringchime4, document.getElementById(`chime4`), window.innerWidth / 2 + windBoxRatio5th, topY + stringUnit * 4, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 4, currentStringLook);
-        let chime5 = new Chimes(stringchime5, document.getElementById(`chime5`), window.innerWidth / 2 + windBoxRatio7th, topY + stringUnit * 3, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3, currentStringLook);
-        let chime6 = new Chimes(stringchime6, document.getElementById(`chime6`), window.innerWidth / 2 - windBoxRatio7th, topY + stringUnit * 3, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3, currentStringLook);
+        let chime0 = new Chimes(stringchime0, document.getElementById(`chime0`), window.innerWidth / 2, topY + stringUnit * 2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 0, stringUnit * 6);
+        let chime1 = new Chimes(stringchime1, document.getElementById(`chime1`), window.innerWidth / 2 - windBoxRatio5th, topY + stringUnit * 4, document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 1000, stringUnit * 4);
+        let chime2 = new Chimes(stringchime2, document.getElementById(`chime2`), window.innerWidth / 2 + windBoxRatio12th, topY + stringUnit * 2.5, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit * 2.5);
+        let chime3 = new Chimes(stringchime3, document.getElementById(`chime3`), window.innerWidth / 2 - windBoxRatio12th, topY + stringUnit * 2.5, document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 500, stringUnit * 2.5);
+        let chime4 = new Chimes(stringchime4, document.getElementById(`chime4`), window.innerWidth / 2 + windBoxRatio5th, topY + stringUnit * 4, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 4);
+        let chime5 = new Chimes(stringchime5, document.getElementById(`chime5`), window.innerWidth / 2 + windBoxRatio7th, topY + stringUnit * 3, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3);
+        let chime6 = new Chimes(stringchime6, document.getElementById(`chime6`), window.innerWidth / 2 - windBoxRatio7th, topY + stringUnit * 3, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3);
 
         // pattern 2 setups
         let start2X = window.innerWidth / 4;
@@ -469,17 +453,20 @@ window.onload = function() {
 
         print();
 
+        function assignStringPattern() {
+            let newStringLook = stringFormArray[stringFormIndex];
+            stringElements.forEach(string => {
+                string.innerHTML = newStringLook;
+            });
+        }
+
         changeStringButton.addEventListener("click", function(event) {
             stringFormIndex++;
             if (stringFormIndex === stringFormArray.length) {
                 stringFormIndex = 0;
             }
-            // for (let j = 0; j < stringLookArray.length; j++) {
-            //   stringLookArray[j].setStringLook(stringFormArray[stringFormIndex]);
-            //creer chime string look function dans constructeur
-            // };
+            assignStringPattern();
             print();
-            console.log('currentStringLook')
 
         });
         //can change the background color 
