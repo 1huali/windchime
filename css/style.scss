@@ -25,9 +25,9 @@ body {
     position: relative;
     overflow: hidden;
     display: flex;
-    @include tablet-and-less {
-        flex-direction: column;
-    }
+    flex-direction: column;
+    // @include tablet-and-less {
+    // }
 }
 
 .--dark {

@@ -23,11 +23,7 @@ body {
   position: relative;
   overflow: hidden;
   display: flex;
-}
-@media (max-width: 1365px) {
-  body {
-    flex-direction: column;
-  }
+  flex-direction: column;
 }
 
 .--dark {
@@ -137,38 +133,6 @@ h1 {
 @media (max-width: 767px) {
   .databox {
     width: 85%;
-  }
-}
-@media (min-width: 481px) {
-  .databox .force {
-    order: 1;
-  }
-  .databox .input {
-    order: 2;
-  }
-  .databox .mode {
-    order: 3;
-  }
-  .databox .sensitivity {
-    order: 4;
-  }
-  .databox .mute {
-    order: 5;
-  }
-  .databox .pattern {
-    order: 6;
-  }
-  .databox .plate {
-    order: 7;
-  }
-  .databox .string {
-    order: 8;
-  }
-  .databox .look {
-    order: 9;
-  }
-  .databox .sound {
-    order: 10;
   }
 }
 @media (min-width: 768px) and (max-width: 1365px) {
