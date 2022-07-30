@@ -121,7 +121,6 @@ window.onload = function() {
 
 
 
-
         //window resizing - responsive design
         let stringUnit = window.innerHeight / 25;
         let topY = window.innerHeight / 70;
@@ -304,9 +303,7 @@ window.onload = function() {
         let coinSound2 = document.getElementById(`coinSound2`);
 
         let packImage = document.querySelector('.pack__image');
-
         packImage.addEventListener('click', (event) => {
-            console.log(packImage);
             packImage.parentNode.style.display = 'none';
         });
 
@@ -343,7 +340,7 @@ window.onload = function() {
             let windisActive = false;
             //windForce set here :
             // clicks++;
-            windForce = clicks * 0.3;
+            windForce = clicks * 0.1;
             console.log(windForce)
             if (windForce > 0.7) {
                 windForce = 0;
@@ -357,25 +354,15 @@ window.onload = function() {
 
                 if (difference > 0) {
                     wind = new p5.Vector(-windForce, 0);
-                    chimesArray[i].windX = wind.x;
-                    chimesArray[i].applyForce(newWindForce);
-
-
-                    if (i === 0) {
-                        topPlate.applyForce(newWindForce);
-                        //sabine set
-                        windisActive = true;
-                    }
                 } else if (difference < 0) {
                     wind = new p5.Vector(windForce, 0);
-                    chimesArray[i].windX = wind.x;
-                    chimesArray[i].applyForce(newWindForce);
-
-                    if (i === 0) {
-                        topPlate.applyForce(newWindForce);
-                        //sabine set
-                        windisActive = true;
-                    }
+                }
+                chimesArray[i].windX = wind.x;
+                chimesArray[i].applyForce(newWindForce);
+                if (i === 0) {
+                    topPlate.applyForce(newWindForce);
+                    //sabine set
+                    windisActive = true;
                 }
             } //end for loop
             //drag force applying on the entirety of the chimes
@@ -390,17 +377,17 @@ window.onload = function() {
             console.log(clicks);
             if (toggle && clicks > 0) {
                 let dataBox = document.getElementById(`instructionDiv`).getBoundingClientRect();
-                if (media.__isDesktop()) {
-                    let xPos = dataBox.x + dataBox.width;
-                    if (event.x > xPos) {
-                        applyMouseWindOnWingchime();
-                    }
-                } else {
-                    let yPos = dataBox.height + dataBox.y;
-                    if (event.clientY > yPos) {
-                        applyMouseWindOnWingchime();
-                    }
+                // if (media.__isDesktop()) {
+                //     let xPos = dataBox.x + dataBox.width;
+                //     if (event.clientX > xPos) {
+                //         applyMouseWindOnWingchime();
+                //     }
+                // } else {
+                let yPos = dataBox.height + dataBox.y;
+                if (event.clientY > yPos) {
+                    applyMouseWindOnWingchime();
                 }
+                // }
             }
             clicks += 1;
         });
@@ -665,4 +652,5 @@ window.onload = function() {
                 }
             }
         }
+        print();
     } //end window on load

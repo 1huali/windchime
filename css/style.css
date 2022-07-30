@@ -38,13 +38,6 @@ header {
   justify-content: center;
   height: 25vh;
 }
-@media (min-width: 1366px) {
-  header {
-    margin-left: 8%;
-    width: 24rem;
-  }
-}
-
 h1 {
   font-size: 2rem;
   text-align: center;
@@ -135,19 +128,9 @@ h1 {
     width: 85%;
   }
 }
-@media (min-width: 768px) and (max-width: 1365px) {
+@media (min-width: 768px) {
   .databox {
     width: 32rem;
-  }
-}
-@media (min-width: 991px) {
-  .databox {
-    width: 40rem;
-  }
-}
-@media (min-width: 1366px) {
-  .databox {
-    width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -160,23 +143,9 @@ h1 {
     max-width: 7rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1365px) {
+@media (min-width: 768px) {
   .databox .data {
     width: 7rem;
-  }
-}
-@media (min-width: 991px) {
-  .databox .data {
-    width: 9rem;
-  }
-}
-@media (min-width: 1366px) {
-  .databox .data {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 1.5rem;
-    width: 24rem;
   }
 }
 .databox .data__button, .databox .data__value {
@@ -186,6 +155,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 11px;
 }
 @media (min-width: 768px) and (max-width: 1365px) {
@@ -198,18 +168,6 @@ h1 {
     font-size: 1rem;
   }
 }
-@media (min-width: 991px) {
-  .databox .data__button, .databox .data__value {
-    height: 2rem;
-  }
-}
-@media (min-width: 1366px) {
-  .databox .data__button, .databox .data__value {
-    margin: 0;
-    height: 2.25rem;
-    font-size: 1.25rem;
-  }
-}
 .databox .data__button {
   box-sizing: border-box;
   border: 0;
@@ -220,11 +178,6 @@ h1 {
 .databox .data__button:hover {
   background-color: #000000;
   color: #FFFFFF;
-}
-@media (min-width: 1366px) {
-  .databox .data__button {
-    width: 10rem;
-  }
 }
 .databox .data .--dark {
   background-color: #000000;
@@ -243,7 +196,6 @@ h1 {
   .databox .data__value {
     flex-grow: 1;
     display: block;
-    width: calc(100% - 10rem);
     text-align: center;
   }
 }
@@ -260,13 +212,22 @@ main #windchimeBox {
   margin: 0 auto;
   max-width: 800px;
 }
+main .plate, main .strings, main .mass {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
 main .plate {
   margin: 0;
   position: absolute;
   top: 0;
   width: 100%;
   text-align: center;
-  max-width: 100vw;
   font-size: 1.5rem;
 }
 @media (max-width: 480px) {
