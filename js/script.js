@@ -269,7 +269,11 @@ window.onload = function() {
         let patternArray = [pattern1, pattern2, pattern3];
         let patternCurrentIndex = 0;
         let patternChangeButton = document.getElementById(`patternButton`);
+        let patternListArray = ['Mountains', 'Volcano', 'Cascade'];
         //
+
+        let patternTextMode = document.getElementById('currentPattern');
+
 
         //setup variables for interactivity
         let startDrag = false;
@@ -458,9 +462,9 @@ window.onload = function() {
             if (patternCurrentIndex === patternArray.length) {
                 patternCurrentIndex = 0;
             }
+            print();
         });
 
-        print();
 
         function assignStringPattern() {
             let newStringLook = stringFormArray[stringFormIndex];
@@ -560,6 +564,7 @@ window.onload = function() {
             console.log(currentSelfSoundMode)
             currentForceModeTextZone.innerHTML = forceMode;
             soundModeText.innerHTML = currentSelfSoundMode;
+            patternTextMode.innerHTML = patternListArray[patternCurrentIndex];
         }
 
         function micInput() {
