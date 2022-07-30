@@ -27,7 +27,7 @@ class Chimes {
         this.element = el;
         this.stringLength = stringLength;
         this.stringChime = stringChime;
-        this.mass = 1;
+        this.mass = 5;
         this.r = 90;
 
         this.gravity = 0.01;
@@ -79,7 +79,7 @@ class Chimes {
         //relative to mass
         this.angleAcc += (this.windX / 100);
         this.angleVel += this.angleAcc;
-        // console.log(this.angleAcc);          
+        // console.log(this.angleAcc);
         // console.log(this.angle);
 
         this.angle += this.angleVel;
@@ -122,33 +122,32 @@ class Chimes {
     drag(constForce) {
 
 
-
         let drag = this.vel.copy();
         drag.normalize();
         drag.mult(-1);
         //magnitude
         let speedSq = this.vel.magSq();
         drag.setMag(constForce * speedSq);
-
         this.applyForce(drag);
-
 
     }
 
 
     show() {
-        let width = this.element.getBoundingClientRect().width;
+
         // let stringHeight = this.stringChime.getBoundingClientRect().height;
         this.element.style.display = "block";
         this.stringChime.style.display = "block";
         this.stringChime.style.left = `${this.pos.x}px`;
-        this.stringChime.style.top = `${0}px`;
+        this.stringChime.style.top = `${50}px`;
+        let width = this.element.getBoundingClientRect().width;
         this.element.style.left = `${this.pos.x - width / 2}px`;
         this.element.style.top = `${this.pos.y}px`;
-        // this.element.style.top = `${this.pos.y + stringHeight}px`;
+
     }
 
     isChiming() {
+
         let self = this;
         setTimeout(function() {
             self.selfSound.play();

@@ -70,7 +70,6 @@ window.onload = function() {
         let stringFormIndex = 0;
         stringFormArray.push(`|<br>|<br>|<br>|<br>|`);
         stringFormArray.push(`string`);
-        console.log(stringFormArray);
 
 
         //   (plate look)
@@ -84,8 +83,6 @@ window.onload = function() {
         plateLookArray.push(`━━━━━━━━━━━━━༺❀༻━━━━━━━━━━━━━`);
         plateLookArray.push(`·*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　z*̩̩̥͙zZ*̩̩͙‧͙.·͙*̩̩͙Zz*̩̩̥͙z ✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧.`);
         plateLookArray.push(`--------------------------- top-frame ---------------------------`);
-
-
 
 
         //html to js object definition
@@ -302,7 +299,11 @@ window.onload = function() {
         let coinSound = document.getElementById(`coinSound`);
         let coinSound2 = document.getElementById(`coinSound2`);
 
+        let packImage = document.querySelector('.pack__image');
 
+        packImage.addEventListener('click', (event) => {
+            packImage.parentNode.style.display = 'none';
+        });
 
         selfSoundArray.push(dustSound);
         impactSoundArray.push(dustSound2);
@@ -314,13 +315,19 @@ window.onload = function() {
         impactSoundArray.push(coinSound2);
         let currentSoundModeIndex = 0;
 
+        // let mainTitleNode = document.querySelector('.main-title');
+        // let dataBoxNode = document.querySelector('.databox');
+        // console.log(dataBoxNode)
+        // mainTitleNode.addEventListener('click', () => {
+        //     dataBoxNode.classList.toggle('--open');
+        // })
 
         //mute sound button
         let muteButton = document.getElementById(`muteButton`);
         let mute = false;
 
-        window.requestAnimationFrame(animate)
-            //new properties adapted to diff events and contexts.
+        window.requestAnimationFrame(animate);
+        //new properties adapted to diff events and contexts.
 
 
         window.addEventListener("mousemove", function(event) {
@@ -328,9 +335,9 @@ window.onload = function() {
         });
 
         function applyMouseWindOnWingchime() {
-            clicks += 1;
             let windisActive = false;
             //windForce set here :
+            // clicks++;
             windForce = clicks * 0.3;
             console.log(windForce)
             if (windForce > 0.7) {
@@ -375,7 +382,8 @@ window.onload = function() {
         }
 
         window.addEventListener("mousedown", function(event) {
-            if (toggle) {
+            console.log(clicks);
+            if (toggle && clicks > 0) {
                 let dataBox = document.getElementById(`instructionDiv`).getBoundingClientRect();
                 if (media.__isDesktop()) {
                     let xPos = dataBox.x + dataBox.width;
@@ -389,6 +397,7 @@ window.onload = function() {
                     }
                 }
             }
+            clicks += 1;
         });
 
 
@@ -416,7 +425,6 @@ window.onload = function() {
             };
             print();
         });
-
 
         //feature that mutes the chimes
         muteButton.addEventListener("click", function(event) {
@@ -543,7 +551,7 @@ window.onload = function() {
                     timeoutWind = true;
                 }
             } //end of if Toggle
-            bang();
+            // bang();
             window.requestAnimationFrame(animate)
         }
 
