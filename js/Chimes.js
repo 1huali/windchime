@@ -73,14 +73,16 @@ class Chimes {
 
         //variation of the force regarding lenght of string
         let force = this.gravity * Math.sin(this.angle);
-        // console.log(this.angle);
 
         this.angleAcc = (-1 * force);
         //relative to mass
         this.angleAcc += (this.windX / 100);
         this.angleVel += this.angleAcc;
+<<<<<<< HEAD
         // console.log(this.angleAcc);
         // console.log(this.angle);
+=======
+>>>>>>> wawa-design
 
         this.angle += this.angleVel;
 
@@ -90,7 +92,6 @@ class Chimes {
         }
 
 
-        // console.log(wind.x);          
         this.angleVel *= 0.99;
         this.pos.x = this.stringLength * Math.sin(this.angle);
         this.pos.y = this.stringLength * Math.cos(this.angle);
@@ -121,7 +122,10 @@ class Chimes {
 
     drag(constForce) {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> wawa-design
         let drag = this.vel.copy();
         drag.normalize();
         drag.mult(-1);
@@ -135,7 +139,10 @@ class Chimes {
 
     show() {
 
+<<<<<<< HEAD
         // let stringHeight = this.stringChime.getBoundingClientRect().height;
+=======
+>>>>>>> wawa-design
         this.element.style.display = "block";
         this.stringChime.style.display = "block";
         this.stringChime.style.left = `${this.pos.x}px`;
@@ -150,11 +157,17 @@ class Chimes {
 
         let self = this;
         setTimeout(function() {
+<<<<<<< HEAD
             self.selfSound.play();
+=======
+
+            self.selfSound.play()
+        
+>>>>>>> wawa-design
         }, self.delayInterval);
 
-
         // this.selfSound.play();
+
     }
 
     inCollision() {
@@ -164,7 +177,7 @@ class Chimes {
     }
 
 
-    //this allows color on the chimes
+    //colors on the chimes
     setChimeLook(form) {
 
         this.chimeText = form;
@@ -173,7 +186,7 @@ class Chimes {
 
     }
 
-
+//nécessaire ou non?
     setStringLook(stringForm) {
 
         console.log(stringForm, this.element.innerText);
