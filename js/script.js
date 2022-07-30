@@ -1,16 +1,11 @@
 /*
-    A wind chime study
-    Wawa Li
-
-    Program incarnating a physical wind chime : initial state, disturbed state. Input disturbances (wind force through mic or mouse)
-    Eventually think of an impact consequence (visual noise? audio sound?)
-    https://thecodingtrain.com/learning/nature-of-code/2.1-simulating-forces.html
-    https://thecodingtrain.com/learning/nature-of-code/2.2-mass-acceleration.html
-    https://thecodingtrain.com/learning/nature-of-code/2.4-drag.html
+    Digital wind chime
+    2022
 */
 
 "use strict";
 window.onload = function() {
+
         micInput();
         let media = new MediaController(medias);
         let windchimeBox = document.getElementById(`windchimeBox`);
@@ -23,7 +18,6 @@ window.onload = function() {
         let chimesArray = [];
         let userForce = 0;
 
-        //el is the getElementbyId thing visual
         let userModeSwitch = document.getElementById(`triggerButton`);
 
         //buttons
@@ -46,8 +40,7 @@ window.onload = function() {
 
         // let changeChimesFormButton = document.getElementById(`formButton`);
 
-        //implementation of look variations
-        //   (chime elements)
+        //chime look variations
         let changeLookButton = document.getElementById('lookButton');
         let chimeFormArray = [];
         let chimeFormIndex = 0;
@@ -61,29 +54,26 @@ window.onload = function() {
 
         let modeButton = document.getElementById(`modeButton`);
 
-        // let changeChimesFormButton = document.getElementById(`formButton`);
-
-        //implementation of look variations
-        //   (string elements)
+        //string look variations
         let changeStringButton = document.getElementById('stringButton');
         let stringFormArray = [];
         let stringFormIndex = 0;
-        stringFormArray.push(`|<br>|<br>|<br>|<br>|`);
+        stringFormArray.push(`|<br>|`);
         stringFormArray.push(`string`);
-        console.log(stringFormArray);
 
 
         //   (plate look)
         let changePlateLookButton = document.getElementById(`plateButton`);
-        let currentPlateLook = `---------------------------top-frame ---------------------------`;
+        let currentPlateLook = `--------------------top-frame --------------------`;
         let plateLookArray = [];
         let plateLookIndex = 0;
         plateLookArray.push(`━━━━━━━━━━━━━༺✧༻━━━━━━━━━━━━━`);
-        plateLookArray.push(`━━━━━━━⭑*•̩̩͙♩⊱bling•♫•bling••̩̩͙⊰•♪*⭑━━━━━━━`)
+        plateLookArray.push(`━━━━━━━⭑*•̩̩⊱bling•♫•bling••̩̩͙⊰*⭑━━━━━━━`)
         plateLookArray.push(`━━━━━⋆┈┈｡ﾟ❃ུ۪ ❀ུ۪ ❁ུ۪ ❃ུ۪ ❀ུ۪ ﾟ｡┈┈⋆━━━━━`)
         plateLookArray.push(`━━━━━━━━━━━━━༺❀༻━━━━━━━━━━━━━`);
         plateLookArray.push(`·*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　z*̩̩̥͙zZ*̩̩͙‧͙.·͙*̩̩͙Zz*̩̩̥͙z ✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧.`);
-        plateLookArray.push(`--------------------------- top-frame ---------------------------`);
+        plateLookArray.push(`━━━━━━━━━━━━━꧁♡꧂━━━━━━━━━━━━━`);
+        plateLookArray.push(`-------------------- top-frame --------------------`);
 
 
 
@@ -115,7 +105,6 @@ window.onload = function() {
         let stringchime21 = document.getElementById(`string21`);
         let stringchime22 = document.getElementById(`string22`);
         let stringchime23 = document.getElementById(`string23`);
-        // let stringchime24 = document.getElementById(`string24`);
 
         let stringElements = document.getElementsByClassName("strings");
         let chimesElements = document.getElementsByClassName("mass");
@@ -175,11 +164,9 @@ window.onload = function() {
         let chime22 = new Chimes(stringchime22, document.getElementById(`chime22`), start3X - 300 / 2, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
         let chime23 = new Chimes(stringchime23, document.getElementById(`chime23`), start3X + 300 / 2, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
 
-        //enlever chime24
-        // let chime24 = new Chimes(stringchime24, document.getElementById(`chime24`), start3X, start3Y - 200 / 2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 10, stringUnit + 70);
-
 
         function pattern1() {
+
             for (let i = 0; i < stringElements.length; i++) {
                 stringElements[i].style.display = "none";
             }
@@ -205,9 +192,11 @@ window.onload = function() {
             chimesArray.push(chime4);
             chimesArray.push(chime5);
             chimesArray.push(chime6);
+
         }
 
         function pattern2() {
+
             for (let i = 0; i < stringElements.length; i++) {
                 stringElements[i].style.display = "none";
             }
@@ -237,9 +226,11 @@ window.onload = function() {
             chimesArray.push(chime14);
             chimesArray.push(chime15);
             chimesArray.push(chime16);
+
         }
 
         function pattern3() {
+
             for (let i = 0; i < stringElements.length; i++) {
                 stringElements[i].style.display = "none";
             }
@@ -254,7 +245,6 @@ window.onload = function() {
             stringChimeArray.push(stringchime21);
             stringChimeArray.push(stringchime22);
             stringChimeArray.push(stringchime23);
-            // stringChimeArray.push(stringchime24);
 
             chimesArray = [];
             chimesArray.push(chime17);
@@ -264,7 +254,7 @@ window.onload = function() {
             chimesArray.push(chime21);
             chimesArray.push(chime22);
             chimesArray.push(chime23);
-            // chimesArray.push(chime24);
+ 
         }
 
         //pattern mode setup
@@ -320,24 +310,28 @@ window.onload = function() {
         let mute = false;
 
         window.requestAnimationFrame(animate)
-            //new properties adapted to diff events and contexts.
-
 
         window.addEventListener("mousemove", function(event) {
-            mx = event.clientX;
-        });
 
+            mx = event.clientX;
+
+        });
+//comparer le og code
         function applyMouseWindOnWingchime() {
+//       if (toggle === true) { // enlevé pourquoi
             clicks += 1;
             let windisActive = false;
             //windForce set here :
             windForce = clicks * 0.3;
-            console.log(windForce)
+            // console.log(windForce)
             if (windForce > 0.7) {
                 windForce = 0;
                 clicks = 0;
+
             }
+
             let newWindForce = new p5.Vector(.9, 0);
+
             for (let i = 0; i < chimesArray.length; i++) {
                 mx = event.clientX;
                 let chimeX = chimesArray[i].pos.x;
@@ -351,7 +345,6 @@ window.onload = function() {
 
                     if (i === 0) {
                         topPlate.applyForce(newWindForce);
-                        //sabine set
                         windisActive = true;
                     }
                 } else if (difference < 0) {
@@ -361,11 +354,11 @@ window.onload = function() {
 
                     if (i === 0) {
                         topPlate.applyForce(newWindForce);
-                        //sabine set
                         windisActive = true;
                     }
                 }
             } //end for loop
+
             //drag force applying on the entirety of the chimes
             if (windisActive) {
                 setTimeout(function() {
@@ -392,8 +385,9 @@ window.onload = function() {
         });
 
 
-        //feature that changes the sound of the chimes
+        //changes the impact sound of the chimes
         changeSoundButton.addEventListener("click", function(event) {
+
             currentSoundModeIndex++;
             if (currentSoundModeIndex === selfSoundArray.length) {
                 currentSoundModeIndex = 0;
@@ -404,9 +398,13 @@ window.onload = function() {
             }
             currentSelfSoundMode = selfSoundArray[currentSoundModeIndex].id;
             print();
+
         });
-        //feature that goes through the look/characters of the chimes
+
+
+        //changes the look of the chimes
         changeLookButton.addEventListener("click", function(event) {
+
             chimeFormIndex++;
             if (chimeFormIndex === chimeFormArray.length) {
                 chimeFormIndex = 0;
@@ -415,11 +413,13 @@ window.onload = function() {
                 chimesArray[j].setChimeLook(chimeFormArray[chimeFormIndex]);
             };
             print();
+
         });
 
 
-        //feature that mutes the chimes
+        //mutes the chimes
         muteButton.addEventListener("click", function(event) {
+
             mute = !mute;
             if (mute === true) {
                 for (let i = 0; i < chimesArray.length; i++) {
@@ -427,8 +427,10 @@ window.onload = function() {
                     chimesArray[i].impactSound.pause();
                 }
             }
-        }); //end mute button
 
+        });
+
+        //? pourquoi 2 fois call request animationFrame
         window.requestAnimationFrame(animate);
         //new properties adapted to diff events and contexts.
 
@@ -483,6 +485,7 @@ window.onload = function() {
         });
 
         function animate() {
+
             //applications of the properties adapted to diff events and contexts
             patternArray[patternCurrentIndex]();
             //a vertical vectorial force
@@ -533,26 +536,28 @@ window.onload = function() {
                         }
                     } //diff
                 } //end of for loop
-
+//? ici pour ajouter un autre timeOut?
                 if (windisActive === true && timeoutWind === false) {
                     setTimeout(function() {
                         startDrag = true;
                     }, 2000);
                     setTimeout(function() {
                         timeoutWind = false;
-                        console.log("time out wind");
                     }, 5000);
                     timeoutWind = true;
                 }
             } //end of if Toggle
-            // bang();
+            bang();
+
             window.requestAnimationFrame(animate)
         }
 
         function print() {
+
             console.log(currentSelfSoundMode)
             currentForceModeTextZone.innerHTML = forceMode;
             soundModeText.innerHTML = currentSelfSoundMode;
+
         }
 
         function micInput() {

@@ -73,14 +73,11 @@ class Chimes {
 
         //variation of the force regarding lenght of string
         let force = this.gravity * Math.sin(this.angle);
-        // console.log(this.angle);
 
         this.angleAcc = (-1 * force);
         //relative to mass
         this.angleAcc += (this.windX / 100);
         this.angleVel += this.angleAcc;
-        // console.log(this.angleAcc);          
-        // console.log(this.angle);
 
         this.angle += this.angleVel;
 
@@ -90,7 +87,6 @@ class Chimes {
         }
 
 
-        // console.log(wind.x);          
         this.angleVel *= 0.99;
         this.pos.x = this.stringLength * Math.sin(this.angle);
         this.pos.y = this.stringLength * Math.cos(this.angle);
@@ -121,8 +117,6 @@ class Chimes {
 
     drag(constForce) {
 
-
-
         let drag = this.vel.copy();
         drag.normalize();
         drag.mult(-1);
@@ -132,11 +126,11 @@ class Chimes {
 
         this.applyForce(drag);
 
-
     }
 
 
     show() {
+
         this.element.style.display = "block";
         this.stringChime.style.display = "block";
 
@@ -145,19 +139,20 @@ class Chimes {
 
         this.element.style.left = `${this.pos.x}px`;
         this.element.style.top = `${this.pos.y}px`;
+
     }
 
     isChiming() {
+
         let self = this;
         setTimeout(function() {
 
             self.selfSound.play()
-                //console.log(self);
-                //console.log(self.delayInterval);
+        
         }, self.delayInterval);
 
-
         // this.selfSound.play();
+
     }
 
     inCollision() {
@@ -167,7 +162,7 @@ class Chimes {
     }
 
 
-    //this allows color on the chimes
+    //colors on the chimes
     setChimeLook(form) {
 
         this.chimeText = form;
@@ -176,7 +171,7 @@ class Chimes {
 
     }
 
-
+//nécessaire ou non?
     setStringLook(stringForm) {
 
         console.log(stringForm, this.element.innerText);
