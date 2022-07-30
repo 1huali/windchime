@@ -6,7 +6,7 @@
 　　　　　　　　　　　❀꧂　   　      　　　❀　　        　　　　　　　　　　　　. 　　　　　　　　.　　꧁✿❀꧂ 　　　　　　　　.　　　　　　
  ✿ ❀   　   　　　　　　　　　❀　　　　　　　　　　       　   　　　　　　　　　꧁✿꧂　　　　       　    ✦ 　   　　　,　　　　　　　　
 ❀　　　  　　　　 　　❀,　　　 ‍ ‍‍ ‍ 　 　꧁❀     Listen to the sounds　　　.　　　　 　　 　.  　　　　　✿　　　　
-　꧁✿✿꧂      ❀ ,　  ❀   　 　　　❀   It their portal to tell you something　　　　　　　　　　　　　　　　　　✿　　. ˚ ❀❀꧂　    ❀ ,
+　꧁✿✿꧂      ❀ ,　  ❀   　 　　　❀  It their portal to tell you something　　　　　　　　　　　　　　　　　　✿　　. ˚ ❀❀꧂　    ❀ ,
  　　　　　　　✿❀　❀　　　. .❀　　　  　　    ✦　 ✦　　　　❀ 　　　❀.❀꧂　　　　　　.　　　　✿　　　　　　　　　　　 　　   　　　　　 
 ✦ 　　 ❀꧂　　　　　        　 　　❀❀　　　　 　❀.　　　　　　　　　　　　　　　　　　❀　　　　　    　　. 　 　❀　　　
 .　　　　 　　　　　   　　　　　.　　　　　　　　　　　.　　　　　　　　　   　 　˚　　 . ❀ ✦　　　　❀❀　　　　　　　✿　　　　　　ﾟ　　　　
