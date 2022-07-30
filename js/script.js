@@ -444,9 +444,9 @@ window.onload = function() {
             if (patternCurrentIndex === patternArray.length) {
                 patternCurrentIndex = 0;
             }
-        });
+            print();
 
-        print();
+        });
 
         function assignStringPattern() {
             let newStringLook = stringFormArray[stringFormIndex];
@@ -543,7 +543,6 @@ window.onload = function() {
         }
 
         function print() {
-            console.log(currentSelfSoundMode)
             currentForceModeTextZone.innerHTML = forceMode;
             soundModeText.innerHTML = currentSelfSoundMode;
         }
