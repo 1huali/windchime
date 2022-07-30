@@ -81,14 +81,14 @@ h1 {
             height: 50%;
         }
         @include tablet-and-less {
-            content: url('../assets/images/windchime-box_mobile.png');
+            content: url('../assets/images/windchime-box_halfSlant.png');
         }
         @include tablet-and-more {
             height: 90%;
             width: auto;
         }
         @include large-tablet-and-more {
-            content: url('../assets/images/windchime-box_desktop.png');
+            content: url('../assets/images/windchime-box_fullSlant.png');
         }
     }
 }

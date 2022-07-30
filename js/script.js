@@ -1,12 +1,5 @@
 /*
-    A wind chime study
-    Wawa Li
-
-    Program incarnating a physical wind chime : initial state, disturbed state. Input disturbances (wind force through mic or mouse)
-    Eventually think of an impact consequence (visual noise? audio sound?)
-    https://thecodingtrain.com/learning/nature-of-code/2.1-simulating-forces.html
-    https://thecodingtrain.com/learning/nature-of-code/2.2-mass-acceleration.html
-    https://thecodingtrain.com/learning/nature-of-code/2.4-drag.html
+    Digital Wind Chime 
 */
 
 "use strict";
@@ -29,7 +22,7 @@ window.onload = function() {
         //buttons
         let toggle = true;
         let currentForceModeTextZone = document.getElementById(`currentForceMode`);
-        let forceMode = `mouse input`;
+        let forceMode = `Click/Tap Input`;
 
         //variable data
         let forceLevelTextZone = document.getElementById(`forceLevelBox`);
@@ -68,24 +61,23 @@ window.onload = function() {
         let changeStringButton = document.getElementById('stringButton');
         let stringFormArray = [];
         let stringFormIndex = 0;
-        stringFormArray.push(`|<br>|<br>|<br>|<br>|`);
+        stringFormArray.push(`|<br>|`);
         stringFormArray.push(`string`);
 
 
         //   (plate look)
         let changePlateLookButton = document.getElementById(`plateButton`);
-        let currentPlateLook = `---------------------------top-frame ---------------------------`;
+        let currentPlateLook = `----------------------top-frame ----------------------`;
         let plateLookArray = [];
         let plateLookIndex = 0;
         plateLookArray.push(`━━━━━━━━━━━━━༺✧༻━━━━━━━━━━━━━`);
-        plateLookArray.push(`━━━━━━━⭑*•̩̩͙♩⊱bling•♫•bling••̩̩͙⊰•♪*⭑━━━━━━━`)
+        plateLookArray.push(`━━━━━━━━━━━━━꧁ ♡ ꧂━━━━━━━━━━━━━`);
+        plateLookArray.push(`━━━━━━━⭑*•̩̩͙♩⊱bling•✧•bling••̩̩͙⊰•♪*⭑━━━━━━━`)
         plateLookArray.push(`━━━━━⋆┈┈｡ﾟ❃ུ۪ ❀ུ۪ ❁ུ۪ ❃ུ۪ ❀ུ۪ ﾟ｡┈┈⋆━━━━━`)
         plateLookArray.push(`━━━━━━━━━━━━━༺❀༻━━━━━━━━━━━━━`);
         plateLookArray.push(`·*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　z*̩̩̥͙zZ*̩̩͙‧͙.·͙*̩̩͙Zz*̩̩̥͙z ✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧.`);
-        plateLookArray.push(`--------------------------- top-frame ---------------------------`);
+        plateLookArray.push(`----------------- top-frame -----------------`);
 
-
-        //html to js object definition
 
         let stringchime0 = document.getElementById(`string0`);
         let stringBase = document.getElementById(`stringBase`);
@@ -112,7 +104,6 @@ window.onload = function() {
         let stringchime21 = document.getElementById(`string21`);
         let stringchime22 = document.getElementById(`string22`);
         let stringchime23 = document.getElementById(`string23`);
-        let stringchime24 = document.getElementById(`string24`);
 
         let stringElements = document.getElementsByClassName("strings");
         let chimesElements = document.getElementsByClassName("mass");
@@ -131,15 +122,15 @@ window.onload = function() {
         let topPlate = new suspendorBase(stringBase, document.getElementById(`plate`), 0, topY + 10, currentPlateLook);
 
         // pattern 1 setups
-        let windBoxRatio5th = windchimeWidth / 3;
-        let windBoxRatio7th = windchimeWidth / 5;
-        let windBoxRatio12th = windchimeWidth / 8;
+        let windBoxRatio5th = windchimeWidth / 2.5;
+        let windBoxRatio7th = windchimeWidth / 3.5;
+        let windBoxRatio12th = windchimeWidth / 7.5;
 
 
-        let chime0 = new Chimes(stringchime0, document.getElementById(`chime0`), window.innerWidth / 2, topY + stringUnit * 2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 0, stringUnit * 6);
+        let chime0 = new Chimes(stringchime0, document.getElementById(`chime0`), window.innerWidth / 2, topY + stringUnit, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 0, stringUnit * 6);
         let chime1 = new Chimes(stringchime1, document.getElementById(`chime1`), window.innerWidth / 2 - windBoxRatio5th, topY + stringUnit * 4, document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 1000, stringUnit * 4);
-        let chime2 = new Chimes(stringchime2, document.getElementById(`chime2`), window.innerWidth / 2 + windBoxRatio12th, topY + stringUnit * 2.5, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit * 2.5);
-        let chime3 = new Chimes(stringchime3, document.getElementById(`chime3`), window.innerWidth / 2 - windBoxRatio12th, topY + stringUnit * 2.5, document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 500, stringUnit * 2.5);
+        let chime2 = new Chimes(stringchime2, document.getElementById(`chime2`), window.innerWidth / 2 + windBoxRatio12th, topY + stringUnit * 2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit * 2.5);
+        let chime3 = new Chimes(stringchime3, document.getElementById(`chime3`), window.innerWidth / 2 - windBoxRatio12th, topY + stringUnit * 2, document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 500, stringUnit * 2.5);
         let chime4 = new Chimes(stringchime4, document.getElementById(`chime4`), window.innerWidth / 2 + windBoxRatio5th, topY + stringUnit * 4, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 4);
         let chime5 = new Chimes(stringchime5, document.getElementById(`chime5`), window.innerWidth / 2 + windBoxRatio7th, topY + stringUnit * 3, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3);
         let chime6 = new Chimes(stringchime6, document.getElementById(`chime6`), window.innerWidth / 2 - windBoxRatio7th, topY + stringUnit * 3, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3);
@@ -171,9 +162,6 @@ window.onload = function() {
         let chime21 = new Chimes(stringchime21, document.getElementById(`chime21`), start3X + 200 / 2, start3Y - 100 / 2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
         let chime22 = new Chimes(stringchime22, document.getElementById(`chime22`), start3X - 300 / 2, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
         let chime23 = new Chimes(stringchime23, document.getElementById(`chime23`), start3X + 300 / 2, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
-
-        //enlever chime24
-        let chime24 = new Chimes(stringchime24, document.getElementById(`chime24`), start3X, start3Y - 200 / 2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 10, stringUnit + 70);
 
 
         function pattern1() {
@@ -251,7 +239,6 @@ window.onload = function() {
             stringChimeArray.push(stringchime21);
             stringChimeArray.push(stringchime22);
             stringChimeArray.push(stringchime23);
-            stringChimeArray.push(stringchime24);
 
             chimesArray = [];
             chimesArray.push(chime17);
@@ -261,7 +248,6 @@ window.onload = function() {
             chimesArray.push(chime21);
             chimesArray.push(chime22);
             chimesArray.push(chime23);
-            chimesArray.push(chime24);
         }
 
         //pattern mode setup
@@ -552,7 +538,7 @@ window.onload = function() {
                     timeoutWind = true;
                 }
             } //end of if Toggle
-            // bang();
+            bang();
             window.requestAnimationFrame(animate)
         }
 
