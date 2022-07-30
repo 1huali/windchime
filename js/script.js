@@ -115,7 +115,7 @@ window.onload = function() {
         let stringchime21 = document.getElementById(`string21`);
         let stringchime22 = document.getElementById(`string22`);
         let stringchime23 = document.getElementById(`string23`);
-        let stringchime24 = document.getElementById(`string24`);
+        // let stringchime24 = document.getElementById(`string24`);
 
         let stringElements = document.getElementsByClassName("strings");
         let chimesElements = document.getElementsByClassName("mass");
@@ -176,7 +176,7 @@ window.onload = function() {
         let chime23 = new Chimes(stringchime23, document.getElementById(`chime23`), start3X + 300 / 2, start3Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
 
         //enlever chime24
-        let chime24 = new Chimes(stringchime24, document.getElementById(`chime24`), start3X, start3Y - 200 / 2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 10, stringUnit + 70);
+        // let chime24 = new Chimes(stringchime24, document.getElementById(`chime24`), start3X, start3Y - 200 / 2, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 10, stringUnit + 70);
 
 
         function pattern1() {
@@ -254,7 +254,7 @@ window.onload = function() {
             stringChimeArray.push(stringchime21);
             stringChimeArray.push(stringchime22);
             stringChimeArray.push(stringchime23);
-            stringChimeArray.push(stringchime24);
+            // stringChimeArray.push(stringchime24);
 
             chimesArray = [];
             chimesArray.push(chime17);
@@ -264,7 +264,7 @@ window.onload = function() {
             chimesArray.push(chime21);
             chimesArray.push(chime22);
             chimesArray.push(chime23);
-            chimesArray.push(chime24);
+            // chimesArray.push(chime24);
         }
 
         //pattern mode setup
@@ -449,6 +449,8 @@ window.onload = function() {
             if (patternCurrentIndex === patternArray.length) {
                 patternCurrentIndex = 0;
             }
+
+
         });
 
         print();
