@@ -302,6 +302,7 @@ window.onload = function() {
         let packImage = document.querySelector('.pack__image');
 
         packImage.addEventListener('click', (event) => {
+            console.log(packImage);
             packImage.parentNode.style.display = 'none';
         });
 

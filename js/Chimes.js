@@ -78,11 +78,6 @@ class Chimes {
         //relative to mass
         this.angleAcc += (this.windX / 100);
         this.angleVel += this.angleAcc;
-<<<<<<< HEAD
-        // console.log(this.angleAcc);
-        // console.log(this.angle);
-=======
->>>>>>> wawa-design
 
         this.angle += this.angleVel;
 
@@ -122,10 +117,6 @@ class Chimes {
 
     drag(constForce) {
 
-<<<<<<< HEAD
-
-=======
->>>>>>> wawa-design
         let drag = this.vel.copy();
         drag.normalize();
         drag.mult(-1);
@@ -139,10 +130,6 @@ class Chimes {
 
     show() {
 
-<<<<<<< HEAD
-        // let stringHeight = this.stringChime.getBoundingClientRect().height;
-=======
->>>>>>> wawa-design
         this.element.style.display = "block";
         this.stringChime.style.display = "block";
         this.stringChime.style.left = `${this.pos.x}px`;
@@ -157,13 +144,9 @@ class Chimes {
 
         let self = this;
         setTimeout(function() {
-<<<<<<< HEAD
-            self.selfSound.play();
-=======
 
             self.selfSound.play()
-        
->>>>>>> wawa-design
+
         }, self.delayInterval);
 
         // this.selfSound.play();
@@ -186,7 +169,7 @@ class Chimes {
 
     }
 
-//nécessaire ou non?
+    //nécessaire ou non?
     setStringLook(stringForm) {
 
         console.log(stringForm, this.element.innerText);
