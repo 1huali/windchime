@@ -262,14 +262,10 @@ window.onload = function() {
         let patternArray = [pattern1, pattern2, pattern3];
         let patternListArray = [`Mount@in`,`Cascade`,`#3`];
 
-        patternListArray.push(`Mountain`);
-        patternListArray.push(`Cascade`);
-        patternListArray.push(`#3`);
         // let patternListArrayIndex = 0;
         let patternCurrentIndex = 0;
         let patternChangeButton = document.getElementById(`patternButton`);
         let currentPatternText = document.getElementById(`currentPattern`);
-       let printedPattern = `m0untains`
         //
 
         //setup variables for interactivity
@@ -458,15 +454,15 @@ window.onload = function() {
             patternCurrentIndex++;
             // patternListArray++;
             console.log(patternCurrentIndex);
+            console.log(patternListArray.length);
+            console.log(patternListArray[patternCurrentIndex]);
 
-            if (patternCurrentIndex === patternArray.length) {
+            if (patternCurrentIndex === patternListArray.length) {
                 patternCurrentIndex = 0;
             }
-currentPatternText = patternListArray[patternCurrentIndex].id;
-
+            print();
         });
 
-        print();
 
         function assignStringPattern() {
             let newStringLook = stringFormArray[stringFormIndex];
@@ -567,7 +563,7 @@ currentPatternText = patternListArray[patternCurrentIndex].id;
 
             console.log(currentSelfSoundMode)
             currentForceModeTextZone.innerHTML = forceMode;
-            currentPatternText.innerHTML = patternListArray;
+            currentPatternText.innerHTML = patternListArray[patternCurrentIndex];
 
         }
 
