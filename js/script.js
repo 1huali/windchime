@@ -127,7 +127,7 @@ window.onload = function() {
         let windchimeBoxM = windchimeBox.getBoundingClientRect();
         let windchimeWidth = windchimeBoxM.width;
 
-        let topPlate = new suspendorBase(stringBase, document.getElementById(`plate`), 0, topY + 10, currentPlateLook);
+        let topPlate = new suspendorBase(document.getElementById(`plate`), 0, topY + 10, currentPlateLook);
 
         // pattern 1 setups
         let windBoxRatio5th = windchimeWidth / 3;
@@ -201,6 +201,7 @@ window.onload = function() {
             chimesArray.push(chime4);
             chimesArray.push(chime5);
             chimesArray.push(chime6);
+            topPlate.setCorePosition(chime0);
         }
 
         function pattern2() {
@@ -233,6 +234,8 @@ window.onload = function() {
             chimesArray.push(chime14);
             chimesArray.push(chime15);
             chimesArray.push(chime16);
+            topPlate.setCorePosition(chime7);
+
         }
 
         function pattern3() {
@@ -261,6 +264,7 @@ window.onload = function() {
             chimesArray.push(chime22);
             chimesArray.push(chime23);
             chimesArray.push(chime24);
+            topPlate.setCorePosition(chime17);
         }
 
         //pattern mode setup

@@ -22,7 +22,7 @@ class Chimes {
         this.angle = Math.PI / 4;
         this.angleVel = 0;
         this.angleAcc = 0.0001;
-        this.currentAngleVel = 120;
+        this.currentAngleVel = 60;
 
         this.element = el;
         this.stringLength = stringLength;

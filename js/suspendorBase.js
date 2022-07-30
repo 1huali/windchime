@@ -1,16 +1,15 @@
 class suspendorBase {
 
-    constructor(stringChime, el, x, y, currentLook) {
+    constructor(el, x, y, currentLook) {
         this.pos = new p5.Vector(x, y);
         this.vel = new p5.Vector(0, 0);
         this.acc = new p5.Vector(0, 0);
-        this.topSpeed = 20;
-        console.log(y)
-
+        // this.topSpeed = 20;
+        this.topSpeed = 5;
         this.initialPos = new p5.Vector(x, y);
-
+        this.corePosition;
         this.element = el;
-        this.stringChime = stringChime;
+
         this.mass = 1;
         this.r = 0;
         // this.impactSound= impactSound;
@@ -20,6 +19,10 @@ class suspendorBase {
         this.windowOffset = window.innerWidth / 10;
     }
 
+    setCorePosition(core) {
+        this.corePosition = core.pos;
+        console.log(this.corePosition);
+    }
 
 
     //calculate acc, add acc to vel, limit vel when it's necessary and apply to pos
@@ -28,13 +31,6 @@ class suspendorBase {
         this.vel.add(this.acc);
         this.vel.limit(this.topSpeed);
         this.pos.add(this.vel);
-        // console.log(this.pos);
-
-        // represent the origin of the string eventually maybe
-        // this.stringChime.style.left= `${this.pos.x}px`;
-        // this.stringChime.style.top = `${this.pos.y-100}px`;
-        // this.element.style.left = `${this.pos.x}px`;
-        // this.element.style.top = `${this.pos.y}px`;
 
         if (resetAcc === true) {
             this.acc.mult(0);
@@ -68,18 +64,7 @@ class suspendorBase {
 
     checkEdges() {
 
-        //left-right
-        if (this.pos.x > this.initialPos.x + this.windowOffset) {
-            this.pos.x = this.initialPos.x + this.windowOffset;
-            this.vel.x *= -1;
-            // console.log("test right boundary");
-
-        } else if (this.pos.x < (this.initialPos.x - this.windowOffset)) {
-            this.pos.x = this.initialPos.x - this.windowOffset;
-            this.vel.x *= -1;
-            // console.log("test left boundary");
-
-        }
+        this.pos.x = (this.corePosition.x - this.element.getBoundingClientRect().width / 2);
 
     }
 
