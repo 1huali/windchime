@@ -13,7 +13,7 @@
 　.　　　　✿　　　꧁✿　❀　　　　　. 　　 　 ❀ ✿꧂ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ,　　　　　　❀✿꧂　　　　　　　* .　❀　　　 　　　　　　　　　　　　　　.　
 　　　　　　　❀　　 ✦ 　　　　   　 　　　˚　　　　　　　　　　　　　　❀　　　　　　   　　　　　　　　　　　　　　　.　　　　　　　　　　　꧁✿　　 
 
-This program is a digitally generated wind chime instrument. 
+This program is a digitally simulated wind chime instrument. 
 
 
 instructions: 
@@ -45,7 +45,7 @@ object, the wind chime. Even though many believe possible the concept of saving 
 
 ꧁✿/----------------------------------------------------------------------------------------------------
 
-ce programme est un carillon à vent généré digitalement.
+ce programme est un carillon à vent simulé numériquement.
 
 
 instructions :
