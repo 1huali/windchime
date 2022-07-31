@@ -543,6 +543,7 @@ window.onload = function() {
         }
 
         function print() {
+            console.log(currentSelfSoundMode)
             currentForceModeTextZone.innerHTML = forceMode;
             soundModeText.innerHTML = currentSelfSoundMode;
         }
