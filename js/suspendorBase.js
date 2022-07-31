@@ -21,7 +21,6 @@ class suspendorBase {
 
     setCorePosition(core) {
         this.corePosition = core.pos;
-        console.log(this.corePosition);
     }
 
 

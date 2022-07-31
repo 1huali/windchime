@@ -250,7 +250,7 @@ main .mass {
   position: absolute;
   display: none;
   text-align: center;
-  font-size: 6em;
+  font-size: 10vh;
 }
 @media (max-width: 480px) {
   main .mass {

@@ -268,7 +268,8 @@ main {
         position: absolute;
         display: none;
         text-align: center;
-        font-size: 6em;
+        font-size: 10vh;
+        // font-size: 5rem;
         @include mobile {
             font-size: 4em;
         }

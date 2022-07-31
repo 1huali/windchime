@@ -164,7 +164,6 @@ class Chimes {
     setChimeLook(form) {
 
         this.chimeText = form;
-        console.log(form, this.element.innerText);
         this.element.textContent = form;
 
     }
@@ -172,9 +171,14 @@ class Chimes {
     //nécessaire ou non?
     setStringLook(stringForm) {
 
-        console.log(stringForm, this.element.innerText);
         this.element.textContent = stringForm;
 
     }
+
+    setPosition(posX, posY) {
+        this.pos.x = posX;
+        this.pos.y = posY;
+    }
+
 
 } //end of class
