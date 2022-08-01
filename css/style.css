@@ -57,7 +57,7 @@ h1 {
   height: 100vh;
   width: 100vw;
   max-width: 100vw;
-  background-color: #FFFFFF;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +73,7 @@ h1 {
 }
 @media (max-width: 1365px) {
   .pack > img {
-    content: url("../assets/images/windchime-box_mobile.png");
+    content: url("../assets/images/windchime-box_halfSlant.png");
   }
 }
 @media (min-width: 768px) {
@@ -84,7 +84,7 @@ h1 {
 }
 @media (min-width: 991px) {
   .pack > img {
-    content: url("../assets/images/windchime-box_desktop.png");
+    content: url("../assets/images/windchime-box_fullSlant.png");
   }
 }
 

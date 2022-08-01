@@ -57,7 +57,7 @@ h1 {
     height: 100vh;
     width: 100vw;
     max-width: 100vw;
-    background-color: #FFFFFF;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,14 +68,14 @@ h1 {
             height: 50%;
         }
         @include tablet-and-less {
-            content: url('../assets/images/windchime-box_mobile.png');
+            content: url('../assets/images/windchime-box_halfSlant.png');
         }
         @include tablet-and-more {
             height: 90%;
             width: auto;
         }
         @include large-tablet-and-more {
-            content: url('../assets/images/windchime-box_desktop.png');
+            content: url('../assets/images/windchime-box_fullSlant.png');
         }
     }
 }
