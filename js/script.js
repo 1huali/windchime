@@ -1,11 +1,6 @@
 /*
-    A wind chime study
+    A Digital Windchime
     Wawa Li
-    Program incarnating a physical wind chime : initial state, disturbed state. Input disturbances (wind force through mic or mouse)
-    Eventually think of an impact consequence (visual noise? audio sound?)
-    https://thecodingtrain.com/learning/nature-of-code/2.1-simulating-forces.html
-    https://thecodingtrain.com/learning/nature-of-code/2.2-mass-acceleration.html
-    https://thecodingtrain.com/learning/nature-of-code/2.4-drag.html
 */
 
 "use strict";
@@ -24,11 +19,13 @@ window.onload = function() {
 
         //el is the getElementbyId thing visual
         let userModeSwitch = document.getElementById(`triggerButton`);
+        let muteText = document.getElementById(``)
 
         //buttons
+        let light = true;
         let toggle = true;
-        let currentForceModeTextZone = document.getElementById(`currentForceMode`);
-        let forceMode = `mouse input`;
+        // let currentForceModeTextZone = document.getElementById(`currentForceMode`);
+        let forceMode = `Mouse/Tap Input`;
 
         //variable data
         let forceLevelTextZone = document.getElementById(`forceLevelBox`);
@@ -51,6 +48,7 @@ window.onload = function() {
         chimeFormArray.push(`♫`);
 
         let modeButton = document.getElementById(`modeButton`);
+        let lightText = document.getElementById(`lightText`);
 
         //   (string elements)
         let changeStringButton = document.getElementById('stringButton');
@@ -339,6 +337,8 @@ window.onload = function() {
             chimesArray.push(chime24);
             topPlate.setCorePosition(chime24);
         }
+
+        let chimes = [chime1, chime2, chime3, chime4, chime5, chime6, chime7, chime8, chime9, chime10, chime11, chime12, chime13, chime14, chime15, chime16, chime17, chime18, chime19, chime20, chime21, chime22, chime23, chime24];
         let resizingWidth = 0;
         let resizing = 0;
         window.addEventListener('resize', () => {
@@ -547,8 +547,10 @@ modeButton.addEventListener("click", function(event) {
         elements.forEach(element => {
             element.classList.toggle('--dark');
         });
+        print();
+
     });
-    print();
+    // print();
 });
 
         function animate() {
@@ -623,6 +625,8 @@ modeButton.addEventListener("click", function(event) {
             currentForceModeTextZone.innerHTML = forceMode;
             soundModeText.innerHTML = currentSelfSoundMode;
             patternTextMode.innerHTML = patternListArray[patternCurrentIndex];
+            muteText.innerHTML = mute ? 'On' : 'Off';
+            lightText.innerHTML = light ? 'Dark' : 'Light';
         }
 
         function micInput() {
@@ -643,7 +647,7 @@ modeButton.addEventListener("click", function(event) {
                     microphoneIn.connect(filter);
                     //use the analyzer object to get some properties ....
                     filter.connect(analyser);
-                    console.log(`micInput`);
+                    // console.log(`micInput`);
 
                     //we do not need a destination (out)
                     //analyser.connect(audioContext.destination); is the translation of waves into pixel
@@ -722,5 +726,5 @@ modeButton.addEventListener("click", function(event) {
                 }
             }
         }
-        print();
+        // print();
     } //end window on load

@@ -1,5 +1,4 @@
 class Chimes {
-    //https://www.youtube.com/watch?v=NBWMtlbbOag
 
 
     constructor(stringChime, el, x, y, selfSound, impactSound, currentLook, chimeText, delayInterval, stringLength) {
@@ -180,6 +179,15 @@ class Chimes {
         this.windowOffset = window.innerWidth / 10;
         this.pos = newPosition;
         this.initialPos = newPosition;
+
+
+    }
+
+    setSound(selfSound, impactSound) {
+
+
+        this.selfSound = selfSound;
+        this.impactSound = impactSound;
 
 
     }
