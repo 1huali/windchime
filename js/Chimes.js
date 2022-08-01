@@ -21,8 +21,8 @@ class Chimes {
 
         this.angle = Math.PI / 4;
         this.angleVel = 0;
-        this.angleAcc = 0.0001;
-        this.currentAngleVel = 60;
+        this.angleAcc = 0.001;
+        this.currentAngleVel = 100;
 
         this.element = el;
         this.stringLength = stringLength;
@@ -174,15 +174,14 @@ class Chimes {
 
     }
 
-    setPosition(x, y) {
-        console.log(this.pos);
-        console.log(this.element);
+    setPosition(newPosition) {
+
+
         this.windowOffset = window.innerWidth / 10;
-        this.pos.set(x, y);
-        this.initialPos.set(x, y);
-        console.log(this.pos);
-        // this.element.style.left = this.pos.x + 'px';
-        // this.element.style.top = this.pos.y + 'px';
+        this.pos = newPosition;
+        this.initialPos = newPosition;
+
+
     }
 
 

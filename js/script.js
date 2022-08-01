@@ -12,7 +12,7 @@
 "use strict";
 window.onload = function() {
         micInput();
-        let media = new MediaController(medias);
+        let animation;
         let windchimeBox = document.getElementById(`windchimeBox`);
         let clicks = 0;
         let windForce = 0;
@@ -208,7 +208,7 @@ window.onload = function() {
 
             positions.x = xPositions;
             positions.y = yPositions;
-            return positions
+            return positions;
         }
 
 
@@ -287,8 +287,8 @@ window.onload = function() {
         let chime9 = new Chimes(stringchime9, document.getElementById(`chime9`), chimePositions.x[2], chimePositions.y[2], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
         let chime10 = new Chimes(stringchime10, document.getElementById(`chime10`), chimePositions.x[2], chimePositions.y[2], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
         let chime11 = new Chimes(stringchime11, document.getElementById(`chime11`), chimePositions.x[3], chimePositions.y[2], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
-        let chime12 = new Chimes(stringchime11, document.getElementById(`chime12`), chimePositions.x[4], chimePositions.y[4], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
-        let chime13 = new Chimes(stringchime11, document.getElementById(`chime13`), chimePositions.x[5], chimePositions.y[5], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
+        let chime12 = new Chimes(stringchime12, document.getElementById(`chime12`), chimePositions.x[4], chimePositions.y[4], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
+        let chime13 = new Chimes(stringchime13, document.getElementById(`chime13`), chimePositions.x[5], chimePositions.y[5], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
         let chime14 = new Chimes(stringchime14, document.getElementById(`chime14`), chimePositions.x[6], chimePositions.y[6], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
         let chime15 = new Chimes(stringchime15, document.getElementById(`chime15`), chimePositions.x[7], chimePositions.y[7], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
         let chime16 = new Chimes(stringchime16, document.getElementById(`chime16`), chimePositions.x[8], chimePositions.y[8], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
@@ -319,11 +319,11 @@ window.onload = function() {
         // ];
 
 
-        chimePositions = defineChimesPosition(1);
+        chimePositions = defineChimesPosition(2);
         let chime17 = new Chimes(stringchime17, document.getElementById(`chime17`), chimePositions.x[0], chimePositions.y[0], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit - 70);
         let chime18 = new Chimes(stringchime18, document.getElementById(`chime18`), chimePositions.x[1], chimePositions.y[1], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
         let chime19 = new Chimes(stringchime19, document.getElementById(`chime19`), chimePositions.x[2], chimePositions.y[2], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
-        let chime20 = new Chimes(stringchime18, document.getElementById(`chime20`), chimePositions.x[3], chimePositions.y[3], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
+        let chime20 = new Chimes(stringchime20, document.getElementById(`chime20`), chimePositions.x[3], chimePositions.y[3], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
         let chime21 = new Chimes(stringchime21, document.getElementById(`chime21`), chimePositions.x[4], chimePositions.y[4], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
         let chime22 = new Chimes(stringchime22, document.getElementById(`chime22`), chimePositions.x[5], chimePositions.y[5], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
         let chime23 = new Chimes(stringchime23, document.getElementById(`chime23`), chimePositions.x[6], chimePositions.y[6], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
@@ -376,6 +376,7 @@ window.onload = function() {
             stringChimeArray.push(stringchime14);
             stringChimeArray.push(stringchime15);
             stringChimeArray.push(stringchime16);
+            stringChimeArray.push(stringchime17);
 
             chimesArray = [];
             chimesArray.push(chime7);
@@ -388,8 +389,8 @@ window.onload = function() {
             chimesArray.push(chime14);
             chimesArray.push(chime15);
             chimesArray.push(chime16);
-            topPlate.setCorePosition(chime7);
-
+            chimesArray.push(chime17);
+            topPlate.setCorePosition(chime11);
         }
 
         function pattern3() {
@@ -400,7 +401,6 @@ window.onload = function() {
                 chimesElements[i].style.display = "none";
             }
             stringChimeArray = [];
-            stringChimeArray.push(stringchime17);
             stringChimeArray.push(stringchime18);
             stringChimeArray.push(stringchime19);
             stringChimeArray.push(stringchime20);
@@ -410,7 +410,6 @@ window.onload = function() {
             stringChimeArray.push(stringchime24);
 
             chimesArray = [];
-            chimesArray.push(chime17);
             chimesArray.push(chime18);
             chimesArray.push(chime19);
             chimesArray.push(chime20);
@@ -418,20 +417,19 @@ window.onload = function() {
             chimesArray.push(chime22);
             chimesArray.push(chime23);
             chimesArray.push(chime24);
-            topPlate.setCorePosition(chime17);
+            topPlate.setCorePosition(chime24);
+        }
+        let resizingWidth = 0;
+        let resizing = 0;
+        window.addEventListener('resize', () => {
+            setTimeout(reloadAfterResizing, 500);
+            // patternArray[patternCurrentIndex]();
+        });
+
+        function reloadAfterResizing() {
+            window.location.href = window.location.href;
         }
 
-
-        window.addEventListener('resize', () => {
-            let positions = defineChimesPosition(patternCurrentIndex);
-            for (let i = 0; i < chimesArray.length; ++i) {
-                let currentChime = chimesArray[i];
-                currentChime.setPosition(positions.x[i], positions.y[i]);
-                currentChime.show();
-                currentChime.show();
-            }
-            patternArray[patternCurrentIndex]();
-        });
 
         //pattern mode setup
         let patternArray = [pattern1, pattern2, pattern3];
@@ -494,7 +492,7 @@ window.onload = function() {
         let muteButton = document.getElementById(`muteButton`);
         let mute = false;
 
-        window.requestAnimationFrame(animate);
+        animate();
         //new properties adapted to diff events and contexts.
 
 
@@ -589,7 +587,6 @@ window.onload = function() {
             }
         }); //end mute button
 
-        window.requestAnimationFrame(animate);
         //new properties adapted to diff events and contexts.
 
         //feature that goes thru the plate style options
@@ -643,6 +640,7 @@ window.onload = function() {
         function animate() {
             //applications of the properties adapted to diff events and contexts
             patternArray[patternCurrentIndex]();
+
             //a vertical vectorial force
             let gravity = new p5.Vector(0, 0.009);
             //activation of constructor's functions
@@ -704,7 +702,7 @@ window.onload = function() {
                 }
             } //end of if Toggle
             // bang();
-            window.requestAnimationFrame(animate)
+            animation = window.requestAnimationFrame(animate);
         }
 
         function print() {

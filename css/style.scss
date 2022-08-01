@@ -26,8 +26,6 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    // @include tablet-and-less {
-    // }
 }
 
 .--dark {
@@ -36,15 +34,11 @@ body {
 }
 
 header {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    height: 25vh;
-    @include desktop {
-        // margin-left: 8%;
-        // width: 24rem;
-    }
+    display: block;
+    // align-items: center;
+    // flex-direction: column;
+    // justify-content: center;
+    // height: 30vh;
 }
 
 h1 {
@@ -56,15 +50,11 @@ h1 {
     @include large-tablet-and-more {
         font-size: 3rem;
     }
-    @include desktop {
-        margin-top: 0;
-    }
 }
 
 .pack {
     overflow: hidden;
     position: absolute;
-    // wawa 30vh ici en theorie
     top: 0;
     left: 0;
     z-index: 100;
@@ -115,6 +105,7 @@ $data-margin-desktop: 1.5rem;
 .databox {
     overflow: hidden;
     width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -135,12 +126,6 @@ $data-margin-desktop: 1.5rem;
     @include tablet-and-more {
         width: calc($button-width-tablet * 4 + $data-margin-tablet * 8);
     }
-    // @include large-tablet-and-more {
-    //     width: calc($button-width-large-tablet * 4 + $data-margin-tablet * 8);
-    // }
-    @include desktop {
-        // width: 100%;
-    }
     & .data {
         @include small-tablet-and-less {
             width: calc(25% - 2 * $data-margin-mobile);
@@ -151,16 +136,6 @@ $data-margin-desktop: 1.5rem;
         @include tablet-and-more {
             width: $button-width-tablet;
         }
-        // @include large-tablet-and-more {
-        //     width: $button-width-large-tablet;
-        // }
-        // @include desktop {
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: flex-start;
-        // margin-top: $data-margin-desktop;
-        // width: 24rem;
-        // }
         &__button,
         &__value {
             box-sizing: border-box;
@@ -222,7 +197,7 @@ $data-margin-desktop: 1.5rem;
 
 main {
     position: relative;
-    top: 2rem;
+    top: 1rem;
     flex-grow: 1;
     display: flex;
     & #windchimeBox {
@@ -269,9 +244,11 @@ main {
         display: none;
         text-align: center;
         font-size: 10vh;
-        // font-size: 5rem;
         @include mobile {
             font-size: 4em;
         }
+    }
+    & .core {
+        transform: scale(2);
     }
 }
