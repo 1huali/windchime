@@ -538,16 +538,18 @@ window.onload = function() {
             print();
 
         });
-        //can change the background color 
-        modeButton.addEventListener("click", function(event) {
-            let windChimeElements = [];
-            windChimeElements = windChimeElements.concat(document.querySelectorAll('body'), document.querySelectorAll('button'));
-            windChimeElements.forEach(elements => {
-                elements.forEach(element => {
-                    element.classList.toggle('--dark');
-                });
-            });
+//can change the background color 
+modeButton.addEventListener("click", function(event) {
+    let windChimeElements = [];
+    light = !light;
+    windChimeElements = windChimeElements.concat(document.querySelectorAll('body'), document.querySelectorAll('button'));
+    windChimeElements.forEach(elements => {
+        elements.forEach(element => {
+            element.classList.toggle('--dark');
         });
+    });
+    print();
+});
 
         function animate() {
             //applications of the properties adapted to diff events and contexts
