@@ -121,16 +121,19 @@ window.onload = function() {
 
         let topPlate = new suspendorBase(document.getElementById(`plate`), 0, topY + 10, currentPlateLook);
 
+        const PATTERN_1 = 0,
+            PATTERN_2 = 1,
+            PATTERN_3 = 3;
+
         function defineChimesPosition(currentPatern) {
             stringUnit = window.innerHeight / 25;
             topY = window.innerHeight / 30;
-            patternCurrentIndex = 0;
             windchimeWidth = windchimeBoxM.width;
 
             let xPositions = [];
             let yPositions = [];
             let positions = { x: [], y: [] };
-            if (currentPatern === 0) {
+            if (currentPatern === PATTERN_1) {
                 let windBoxRatio5th = windchimeWidth / 3;
                 let windBoxRatio7th = windchimeWidth / 5;
                 let windBoxRatio12th = windchimeWidth / 8;
@@ -152,7 +155,7 @@ window.onload = function() {
                     topY + stringUnit * 3,
                     topY + stringUnit * 3
                 ];
-            } else if (currentPatern === 1) {
+            } else if (currentPatern === PATTERN_2) {
                 let start2X = window.innerWidth / 4;
                 let start2Y = topY + stringUnit * 5;
                 let offset2X = window.innerWidth / 10;
@@ -180,7 +183,7 @@ window.onload = function() {
                     start2Y - (2.5 * stringUnit + 25),
                     start2Y + (40 + stringUnit)
                 ];
-            } else if (currentPatern === 2) {
+            } else if (currentPatern === PATTERN_3) {
                 let start3X = window.innerWidth / 2;
                 let start3Y = topY + stringUnit * 4;
 
@@ -211,34 +214,7 @@ window.onload = function() {
             return positions;
         }
 
-
-        // pattern 1 setups
-
-        // let windBoxRatio5th = windchimeWidth / 3;
-        // let windBoxRatio7th = windchimeWidth / 5;
-        // let windBoxRatio12th = windchimeWidth / 8;
-
-        // let pattern1XPosition = [
-        //     window.innerWidth / 2,
-        //     window.innerWidth / 2 - windBoxRatio5th,
-        //     window.innerWidth / 2 + windBoxRatio12th,
-        //     window.innerWidth / 2 - windBoxRatio12th,
-        //     window.innerWidth / 2 + windBoxRatio5th,
-        //     window.innerWidth / 2 + windBoxRatio7th,
-        //     window.innerWidth / 2 - windBoxRatio7th
-        // ];
-        // let pattern1YPosition = [
-        //     topY + stringUnit * 2,
-        //     topY + stringUnit * 4,
-        //     topY + stringUnit * 2.5,
-        //     topY + stringUnit * 2.5,
-        //     topY + stringUnit * 4,
-        //     topY + stringUnit * 3,
-        //     topY + stringUnit * 3
-        // ];
-
-        let chimePositions = defineChimesPosition(0);
-        console.log(chimePositions);
+        let chimePositions = defineChimesPosition(PATTERN_1);
 
         let chime0 = new Chimes(stringchime0, document.getElementById(`chime0`), chimePositions.x[0], chimePositions.y[0], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 0, stringUnit * 6);
         let chime1 = new Chimes(stringchime1, document.getElementById(`chime1`), chimePositions.x[1], chimePositions.y[1], document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 1000, stringUnit * 4);
@@ -248,39 +224,7 @@ window.onload = function() {
         let chime5 = new Chimes(stringchime5, document.getElementById(`chime5`), chimePositions.x[5], chimePositions.y[5], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3);
         let chime6 = new Chimes(stringchime6, document.getElementById(`chime6`), chimePositions.x[6], chimePositions.y[6], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3);
 
-        // pattern 2 setups
-        // let start2X = window.innerWidth / 4;
-        // let start2Y = topY + stringUnit * 5;
-        // let offset2X = window.innerWidth / 10;
-        // let chime7 = new Chimes(stringchime7, document.getElementById(`chime7`), start2X, start2Y, document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 0, stringUnit);
-
-        // let pattern2XPosition = [
-        //     start2X,
-        //     start2X + offset2X,
-        //     start2X + offset2X,
-        //     start2X + (2 * offset2X + 20),
-        //     start2X + (2 * offset2X + 20),
-        //     start2X + (3 * offset2X + 30),
-        //     start2X + (3 * offset2X + 30),
-        //     start2X + (4 * offset2X + 40),
-        //     start2X + (4 * offset2X + 40),
-        //     start2X + (2.5 * offset2X + 25)
-        // ];
-
-        // let pattern2YPosition = [
-        //     start2Y,
-        //     start2Y + stringUnit,
-        //     start2Y - stringUnit,
-        //     start2Y + (1.5 * stringUnit + 15),
-        //     start2Y - (1.5 * stringUnit + 15),
-        //     start2Y + (2 * stringUnit + 20),
-        //     start2Y - (2 * stringUnit + 20),
-        //     start2Y + (2.5 * stringUnit + 25),
-        //     start2Y - (2.5 * stringUnit + 25),
-        //     start2Y + (40 + stringUnit)
-        // ];
-
-        chimePositions = defineChimesPosition(1);
+        chimePositions = defineChimesPosition(PATTERN_2);
 
         let chime8 = new Chimes(stringchime8, document.getElementById(`chime8`), chimePositions.x[1], chimePositions.y[1], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
         let chime7 = new Chimes(stringchime7, document.getElementById(`chime7`), chimePositions.x[0], chimePositions.y[0], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 0, stringUnit);
@@ -293,33 +237,7 @@ window.onload = function() {
         let chime15 = new Chimes(stringchime15, document.getElementById(`chime15`), chimePositions.x[7], chimePositions.y[7], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
         let chime16 = new Chimes(stringchime16, document.getElementById(`chime16`), chimePositions.x[8], chimePositions.y[8], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
 
-        //pattern 3
-        // let start3X = window.innerWidth / 2;
-        // let start3Y = topY + stringUnit * 4;
-
-        // let pattern3XPosition = [
-        //     start3X,
-        //     start3X - 100 / 2,
-        //     start3X + 100 / 2,
-        //     start3X - 200 / 2,
-        //     start3X + 200 / 2,
-        //     start3X - 300 / 2,
-        //     start3X + 300 / 2,
-        //     start3X
-        // ];
-        // let pattern3YPosition = [
-        //     start3Y + 300 / 2,
-        //     start3Y,
-        //     start3Y,
-        //     start3Y - 100 / 2,
-        //     start3Y - 100 / 2,
-        //     start3Y,
-        //     start3Y,
-        //     start3Y - 200 / 2
-        // ];
-
-
-        chimePositions = defineChimesPosition(2);
+        chimePositions = defineChimesPosition(PATTERN_3);
         let chime17 = new Chimes(stringchime17, document.getElementById(`chime17`), chimePositions.x[0], chimePositions.y[0], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit - 70);
         let chime18 = new Chimes(stringchime18, document.getElementById(`chime18`), chimePositions.x[1], chimePositions.y[1], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
         let chime19 = new Chimes(stringchime19, document.getElementById(`chime19`), chimePositions.x[2], chimePositions.y[2], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit + 70);
@@ -437,13 +355,7 @@ window.onload = function() {
         let patternListArray = ['Mountains', 'Volcano', 'Cascade'];
         //
 
-        function definePatternChimesPosition() {
-            patternCurrentIndex
-        }
-
-
         let patternTextMode = document.getElementById('currentPattern');
-
 
         //setup variables for interactivity
         let startDrag = false;
@@ -494,7 +406,6 @@ window.onload = function() {
 
         animate();
         //new properties adapted to diff events and contexts.
-
 
         window.addEventListener("mousemove", function(event) {
             mx = event.clientX;
@@ -554,6 +465,7 @@ window.onload = function() {
         //feature that changes the sound of the chimes
         changeSoundButton.addEventListener("click", function(event) {
             currentSoundModeIndex++;
+            console.log(currentSoundModeIndex)
             if (currentSoundModeIndex === selfSoundArray.length) {
                 currentSoundModeIndex = 0;
             }
@@ -561,7 +473,11 @@ window.onload = function() {
                 chimesArray[i].selfSound = selfSoundArray[currentSoundModeIndex];
                 chimesArray[i].impactSound = impactSoundArray[currentSoundModeIndex];
             }
+            console.log(selfSoundArray[currentSoundModeIndex]);
+            console.log(selfSoundArray[currentSoundModeIndex].id);
             currentSelfSoundMode = selfSoundArray[currentSoundModeIndex].id;
+            console.log(currentSoundModeIndex)
+            console.log(currentSoundModeIndex)
             print();
         });
         //feature that goes through the look/characters of the chimes
@@ -701,7 +617,7 @@ window.onload = function() {
                     timeoutWind = true;
                 }
             } //end of if Toggle
-            // bang();
+            bang();
             animation = window.requestAnimationFrame(animate);
         }
 
