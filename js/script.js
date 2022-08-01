@@ -38,7 +38,6 @@ window.onload = function() {
         let currentLookIndex = 0;
         let currentLook = "chimeLook1";
 
-        //implementation of look variations
         //   (chime elements)
         let changeLookButton = document.getElementById('lookButton');
         let chimeFormArray = [];
@@ -53,14 +52,11 @@ window.onload = function() {
 
         let modeButton = document.getElementById(`modeButton`);
 
-        // let changeChimesFormButton = document.getElementById(`formButton`);
-
-        //implementation of look variations
         //   (string elements)
         let changeStringButton = document.getElementById('stringButton');
         let stringFormArray = [];
         let stringFormIndex = 0;
-        stringFormArray.push(`|<br>|<br>|<br>|<br>|`);
+        stringFormArray.push(`|`);
         stringFormArray.push(`string`);
 
 
@@ -73,15 +69,13 @@ window.onload = function() {
         plateLookArray.push(`━━━━━━━꧁ ♡ ꧂━━━━━━━`);
         plateLookArray.push(`━━━⭑*•̩̩͙♩⊱bling•✧•bling••̩̩͙⊰•*⭑━━━`)
         plateLookArray.push(`⋆┈┈｡ﾟ❃ུ۪ ❀ུ۪ ༺❁༻ ❃ུ۪ ❀ུ۪ ﾟ｡┈┈⋆`)
-        plateLookArray.push(`━━━♩•┈┈｡ﾟdaAaAanceEeeEe ﾟ｡┈•♪━━━`)
+        plateLookArray.push(`━━━♩•┈┈｡ﾟwoOoOHoOOo ﾟ｡┈•♪━━━`)
         plateLookArray.push(`━━━━━━━༺❀༻━━━━━━━`);
         plateLookArray.push(`·*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　z*̩̩zZ*̩‧͙☁·͙*̩Zz*̩̩z ✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧.`);
         plateLookArray.push(`·✧head in clouds*✧*feet on ground✧·`);
         plateLookArray.push(`┈┈꧁ on Heaven's ꧂┈┈`);
         plateLookArray.push(`----------------- top-frame -----------------`);
 
-
-        //html to js object definition
 
         let stringchime0 = document.getElementById(`string0`);
         let stringBase = document.getElementById(`stringBase`);
@@ -137,9 +131,9 @@ window.onload = function() {
             let yPositions = [];
             let positions = { x: [], y: [] };
             if (currentPatern === PATTERN_1) {
-                let windBoxRatio5th = windchimeWidth / 3;
-                let windBoxRatio7th = windchimeWidth / 5;
-                let windBoxRatio12th = windchimeWidth / 8;
+                let windBoxRatio5th = windchimeWidth / 2.5;
+                let windBoxRatio7th = windchimeWidth / 3.5;
+                let windBoxRatio12th = windchimeWidth / 7.5;
                 xPositions = [
                     window.innerWidth / 2,
                     window.innerWidth / 2 - windBoxRatio5th,
@@ -150,13 +144,13 @@ window.onload = function() {
                     window.innerWidth / 2 - windBoxRatio7th
                 ];
                 yPositions = [
-                    topY + stringUnit * 2,
-                    topY + stringUnit * 4,
-                    topY + stringUnit * 2.5,
-                    topY + stringUnit * 2.5,
-                    topY + stringUnit * 4,
-                    topY + stringUnit * 3,
-                    topY + stringUnit * 3
+                    topY + stringUnit * 2+40,
+                    topY + stringUnit * 4-50,
+                    topY + stringUnit * 2.5-70,
+                    topY + stringUnit * 2.5-70,
+                    topY + stringUnit * 4-50,
+                    topY + stringUnit * 3-50,
+                    topY + stringUnit * 3-50
                 ];
             } else if (currentPatern === PATTERN_2) {
                 let start2X = window.innerWidth / 4;
@@ -355,7 +349,7 @@ window.onload = function() {
         //pattern mode setup
         let patternArray = [pattern1, pattern2, pattern3];
         let patternChangeButton = document.getElementById(`patternButton`);
-        let patternListArray = ['Mountains', 'Volcano', 'Cascade'];
+        let patternListArray = ['Volcano', 'Cascade', 'Mountains'];
         //
 
         let patternTextMode = document.getElementById('currentPattern');
