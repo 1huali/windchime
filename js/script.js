@@ -467,19 +467,13 @@ window.onload = function() {
         //feature that changes the sound of the chimes
         changeSoundButton.addEventListener("click", function(event) {
             currentSoundModeIndex++;
-            console.log(currentSoundModeIndex)
             if (currentSoundModeIndex === selfSoundArray.length) {
                 currentSoundModeIndex = 0;
             }
-            for (let i = 0; i < chimesArray.length; i++) {
-                chimesArray[i].selfSound = selfSoundArray[currentSoundModeIndex];
-                chimesArray[i].impactSound = impactSoundArray[currentSoundModeIndex];
+            for (let i = 0; i < chimes.length; ++i) {
+                chimes[i].setSound(selfSoundArray[currentSoundModeIndex], impactSoundArray[currentSoundModeIndex]);
             }
-            console.log(selfSoundArray[currentSoundModeIndex]);
-            console.log(selfSoundArray[currentSoundModeIndex].id);
             currentSelfSoundMode = selfSoundArray[currentSoundModeIndex].id;
-            console.log(currentSoundModeIndex)
-            console.log(currentSoundModeIndex)
             print();
         });
         //feature that goes through the look/characters of the chimes
