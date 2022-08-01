@@ -66,15 +66,19 @@ window.onload = function() {
 
         //   (plate look)
         let changePlateLookButton = document.getElementById(`plateButton`);
-        let currentPlateLook = `---------------------------top-frame ---------------------------`;
+        let currentPlateLook = `----------------- top-frame -----------------`;
         let plateLookArray = [];
         let plateLookIndex = 0;
-        plateLookArray.push(`━━━━━━━━━━━━━༺✧༻━━━━━━━━━━━━━`);
-        plateLookArray.push(`━━━━━━━⭑*•̩̩͙♩⊱bling•♫•bling••̩̩͙⊰•♪*⭑━━━━━━━`)
-        plateLookArray.push(`━━━━━⋆┈┈｡ﾟ❃ུ۪ ❀ུ۪ ❁ུ۪ ❃ུ۪ ❀ུ۪ ﾟ｡┈┈⋆━━━━━`)
-        plateLookArray.push(`━━━━━━━━━━━━━༺❀༻━━━━━━━━━━━━━`);
-        plateLookArray.push(`·*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　z*̩̩̥͙zZ*̩̩͙‧͙.·͙*̩̩͙Zz*̩̩̥͙z ✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧.`);
-        plateLookArray.push(`--------------------------- top-frame ---------------------------`);
+        plateLookArray.push(`━━━━━━━༺✧༻━━━━━━━`);
+        plateLookArray.push(`━━━━━━━꧁ ♡ ꧂━━━━━━━`);
+        plateLookArray.push(`━━━⭑*•̩̩͙♩⊱bling•✧•bling••̩̩͙⊰•*⭑━━━`)
+        plateLookArray.push(`⋆┈┈｡ﾟ❃ུ۪ ❀ུ۪ ༺❁༻ ❃ུ۪ ❀ུ۪ ﾟ｡┈┈⋆`)
+        plateLookArray.push(`━━━♩•┈┈｡ﾟdaAaAanceEeeEe ﾟ｡┈•♪━━━`)
+        plateLookArray.push(`━━━━━━━༺❀༻━━━━━━━`);
+        plateLookArray.push(`·*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　z*̩̩zZ*̩‧͙☁·͙*̩Zz*̩̩z ✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧.`);
+        plateLookArray.push(`·✧head in clouds*✧*feet on ground✧·`);
+        plateLookArray.push(`┈┈꧁ on Heaven's ꧂┈┈`);
+        plateLookArray.push(`----------------- top-frame -----------------`);
 
 
         //html to js object definition
