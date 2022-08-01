@@ -129,7 +129,6 @@ class Chimes {
 
 
     show() {
-
         this.element.style.display = "block";
         this.stringChime.style.display = "block";
         this.stringChime.style.left = `${this.pos.x}px`;
@@ -175,9 +174,15 @@ class Chimes {
 
     }
 
-    setPosition(posX, posY) {
-        this.pos.x = posX;
-        this.pos.y = posY;
+    setPosition(x, y) {
+        console.log(this.pos);
+        console.log(this.element);
+        this.windowOffset = window.innerWidth / 10;
+        this.pos.set(x, y);
+        this.initialPos.set(x, y);
+        console.log(this.pos);
+        // this.element.style.left = this.pos.x + 'px';
+        // this.element.style.top = this.pos.y + 'px';
     }
 
 
