@@ -61,7 +61,7 @@ window.onload = function() {
         let changeStringButton = document.getElementById('stringButton');
         let stringFormArray = [];
         let stringFormIndex = 0;
-        stringFormArray.push(`|<br>|`);
+        stringFormArray.push(`|`);
         stringFormArray.push(`string`);
 
 
