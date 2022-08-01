@@ -71,7 +71,7 @@ window.onload = function() {
         plateLookArray.push(`━━━━━━━༺❀༻━━━━━━━`);
         plateLookArray.push(`·*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　z*̩̩zZ*̩‧͙☁·͙*̩Zz*̩̩z ✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧.`);
         plateLookArray.push(`·✧head in clouds*✧*feet on ground✧·`);
-        plateLookArray.push(`┈┈꧁ on Heaven's ꧂┈┈`);
+        plateLookArray.push(`┈┈꧁ Heavens below ꧂┈┈`);
         plateLookArray.push(`----------------- top-frame -----------------`);
 
 
@@ -156,15 +156,15 @@ window.onload = function() {
                 let offset2X = window.innerWidth / 10;
                 xPositions = [
                     start2X,
-                    start2X + offset2X+10,
-                    start2X + offset2X+10,
+                    start2X + 0.5* offset2X+10,
+                    start2X + 0.5 * offset2X+10,
+                    start2X + (1 * offset2X + 15),
+                    start2X + (1 * offset2X + 15),
                     start2X + (2 * offset2X + 20),
                     start2X + (2 * offset2X + 20),
-                    start2X + (3 * offset2X + 30),
-                    start2X + (3 * offset2X + 30),
-                    start2X + (4 * offset2X + 40),
-                    start2X + (4 * offset2X + 40),
-                    start2X + (3 * offset2X + 25)
+                    start2X + (3 * offset2X + 25),
+                    start2X + (3 * offset2X + 25),
+                    start2X + (2 * offset2X + 25)
                     
                 ];
                 yPositions = [
