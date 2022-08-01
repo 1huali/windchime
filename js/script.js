@@ -196,14 +196,6 @@ window.onload = function() {
                     start3X + 300 / 2,
                     start3X
                     
-                    // start3X,
-                    // start3X - 100 / 2,
-                    // start3X + 100 / 2,
-                    // start3X - 200 / 2,
-                    // start3X + 200 / 2,
-                    // start3X - 300 / 2,
-                    // start3X + 300 / 2,
-                    // start3X
                 ];
                 yPositions = [
                     start3Y + (300 / 2)-50,
