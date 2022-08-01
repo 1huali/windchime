@@ -196,14 +196,14 @@ window.onload = function() {
                     
                 ];
                 yPositions = [
-                    start3Y + (300 / 2)-50,
-                    start3Y,
-                    start3Y,
-                    start3Y - (100 / 2)-50,
-                    start3Y - (100 / 2)-50,
-                    start3Y,
-                    start3Y,
-                    start3Y - (200 / 2)-50
+                    (start3Y + (300 / 2)-50)-75,
+                    (start3Y)-75,
+                    (start3Y)-75,
+                    (start3Y - (100 / 2)-50)-75,
+                    (start3Y - (100 / 2)-50)-75,
+                   ( start3Y)-75,
+                    (start3Y)-75,
+                    (start3Y + 60)-15
                 ];
             }
 
@@ -623,7 +623,7 @@ modeButton.addEventListener("click", function(event) {
 
         function print() {
             currentForceModeTextZone.innerHTML = forceMode;
-            soundModeText.innerHTML = currentSelfSoundMode;
+            // soundModeText.innerHTML = currentSelfSoundMode;
             patternTextMode.innerHTML = patternListArray[patternCurrentIndex];
             muteText.innerHTML = mute ? 'On' : 'Off';
             lightText.innerHTML = light ? 'Dark' : 'Light';
