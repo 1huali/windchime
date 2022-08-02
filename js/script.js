@@ -528,14 +528,12 @@ window.onload = function() {
         //taken off version july 2022
             toggle = !toggle;
             if (toggle) {
-              forceMode = `mouse force input`;
-              currentForceInstructionText = `You can implement the wind by clicking on the chimes.`;
+              forceMode = `Mouse/Tap Input`;
               currentAngleVelText = ``;
               currentForceLevelText = `0`;
               print();
             } else {
-              forceMode = `mic input`;
-              currentForceInstructionText = `You can implement the wind by blowing in your mic.`;
+              forceMode = `Mic Input`;
               currentForceLevelText = `0`;
               //value should change with the wind force
               print();
