@@ -215,22 +215,22 @@ window.onload = function() {
         let chimePositions = defineChimesPosition(PATTERN_1);
 
         let chime0 = new Chimes(stringchime0, document.getElementById(`chime0`), chimePositions.x[0], chimePositions.y[0], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 0, stringUnit * 6);
-        let chime1 = new Chimes(stringchime1, document.getElementById(`chime1`), chimePositions.x[1], chimePositions.y[1], document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 1000, stringUnit * 4);
+        let chime1 = new Chimes(stringchime1, document.getElementById(`chime1`), chimePositions.x[1], chimePositions.y[1], document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 100, stringUnit * 4);
         let chime2 = new Chimes(stringchime2, document.getElementById(`chime2`), chimePositions.x[2], chimePositions.y[2], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit * 2.5);
         let chime3 = new Chimes(stringchime3, document.getElementById(`chime3`), chimePositions.x[3], chimePositions.y[3], document.getElementById(`dustSound`), document.getElementById(`dustSound`), currentLook, currentChimeForm, 500, stringUnit * 2.5);
-        let chime4 = new Chimes(stringchime4, document.getElementById(`chime4`), chimePositions.x[4], chimePositions.y[4], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 4);
+        let chime4 = new Chimes(stringchime4, document.getElementById(`chime4`), chimePositions.x[4], chimePositions.y[4], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 100, stringUnit * 4);
         let chime5 = new Chimes(stringchime5, document.getElementById(`chime5`), chimePositions.x[5], chimePositions.y[5], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3);
-        let chime6 = new Chimes(stringchime6, document.getElementById(`chime6`), chimePositions.x[6], chimePositions.y[6], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit * 3);
+        let chime6 = new Chimes(stringchime6, document.getElementById(`chime6`), chimePositions.x[6], chimePositions.y[6], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 100, stringUnit * 3);
 
         chimePositions = defineChimesPosition(PATTERN_2);
         //modif aug1 : chimePosition array had mistyping - 11 unités
         let chime7 = new Chimes(stringchime7, document.getElementById(`chime7`), chimePositions.x[0], chimePositions.y[0], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 0, stringUnit);
-        let chime8 = new Chimes(stringchime8, document.getElementById(`chime8`), chimePositions.x[1], chimePositions.y[1], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
+        let chime8 = new Chimes(stringchime8, document.getElementById(`chime8`), chimePositions.x[1], chimePositions.y[1], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 100, stringUnit);
         let chime9 = new Chimes(stringchime9, document.getElementById(`chime9`), chimePositions.x[2], chimePositions.y[2], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
         let chime10 = new Chimes(stringchime10, document.getElementById(`chime10`), chimePositions.x[3], chimePositions.y[3], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
         let chime11 = new Chimes(stringchime11, document.getElementById(`chime11`), chimePositions.x[4], chimePositions.y[4], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
-        let chime12 = new Chimes(stringchime12, document.getElementById(`chime12`), chimePositions.x[5], chimePositions.y[5], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
-        let chime13 = new Chimes(stringchime13, document.getElementById(`chime13`), chimePositions.x[6], chimePositions.y[6], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
+        let chime12 = new Chimes(stringchime12, document.getElementById(`chime12`), chimePositions.x[5], chimePositions.y[5], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 100, stringUnit);
+        let chime13 = new Chimes(stringchime13, document.getElementById(`chime13`), chimePositions.x[6], chimePositions.y[6], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 100, stringUnit);
         let chime14 = new Chimes(stringchime14, document.getElementById(`chime14`), chimePositions.x[7], chimePositions.y[7], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
         let chime15 = new Chimes(stringchime15, document.getElementById(`chime15`), chimePositions.x[8], chimePositions.y[8], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 500, stringUnit);
         // let chime16 = new Chimes(stringchime16, document.getElementById(`chime16`), chimePositions.x[9], chimePositions.y[9], document.getElementById(`dustSound`), document.getElementById(`dustSound2`), currentLook, currentChimeForm, 1000, stringUnit);
@@ -707,6 +707,7 @@ modeButton.addEventListener("click", function(event) {
                 for (let i = 0; i < chimesArray.length; i++) {
                     if (chimesArray[i].angleVel > Math.abs(0.003)) {
                         chimesArray[i].isChiming();
+                        console.log(`is chiming`);
                     }
                 }
                 //activation of impactSound by detection of collision between 2 chimes
@@ -722,14 +723,14 @@ modeButton.addEventListener("click", function(event) {
 
                 // calculating collision thru difference
                 for (let i = 0; i < chimesArray.length; i++) {
-                    for (let j = 0; j < chimesArray.length; j++) {
+                    for (let j = i; j < chimesArray.length; j++) {
                         let chimeX = chimesArray[i].pos.x;
                         if (chimesArray[i] !== chimesArray[j]) {
                             let otherChimeX = (chimesArray[j].pos.x);
                             let difference = Math.sqrt(Math.pow((chimesArray[j].pos.x - chimesArray[i].pos.x), 2) + Math.pow((chimesArray[j].pos.y - chimesArray[i].pos.y), 2));
 
                             //determines if there is collision or not between 2 chimes objs
-                            if (difference < 100) {
+                            if (difference < 10) {
                                 chimesArray[i].impact = true;
                                 chimesArray[j].impact = true;
                                 if (chimesArray[j].isColliding === false) {
