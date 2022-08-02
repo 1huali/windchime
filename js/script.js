@@ -24,7 +24,7 @@ window.onload = function() {
         //buttons
         let light = true;
         let toggle = true;
-        // let currentForceModeTextZone = document.getElementById(`currentForceMode`);
+        let currentForceModeTextZone = document.getElementById(`currentForceMode`);
         let forceMode = `Mouse/Tap Input`;
 
         //variable data
