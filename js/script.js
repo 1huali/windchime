@@ -142,7 +142,7 @@ window.onload = function() {
                     window.innerWidth / 2 - windBoxRatio7th
                 ];
                 yPositions = [
-                    topY + stringUnit +15 ,
+                    topY + stringUnit *2 -100 ,
                     topY + stringUnit * 4-50,
                     topY + stringUnit * 2.5-70,
                     topY + stringUnit * 2.5-70,
@@ -155,16 +155,16 @@ window.onload = function() {
                 let start2Y = topY + stringUnit * 4;
                 let offset2X = window.innerWidth / 10;
                 xPositions = [
-                    start2X,
-                    start2X +  offset2X,
-                    start2X +  offset2X,
-                    start2X+ (2*offset2X),                   
-                    start2X+ (2*offset2X),                    
-                    start2X +  (3*offset2X),
-                    start2X + (3*offset2X),
-                    start2X + (4*offset2X),
-                    start2X + (4*offset2X),
-                    start2X + (2.5 * offset2X)
+                    start2X+30,
+                    start2X +  1.5*offset2X+30,
+                    start2X +  1.5*offset2X+30,
+                    start2X+ (2.5*offset2X+40),                   
+                    start2X+ (2.5*offset2X+40),                    
+                    start2X +  (3.5*offset2X+50),
+                    start2X + (3.5*offset2X+50),
+                    start2X + (4.5*offset2X+60),
+                    start2X + (4.5*offset2X+60),
+                    start2X + (3 * offset2X)
                     
                 ];
                 yPositions = [
@@ -177,18 +177,7 @@ window.onload = function() {
                     start2Y - (2 * stringUnit)-35,
                    start2Y + (2.5 * stringUnit )-35,
                   (start2Y - (2.5 * stringUnit)-35),
-                    start2Y + (4 * stringUnit + 35)
-
-                //     (start2Y)-35,
-                //     (start2Y + stringUnit+5)-35,
-                //     (start2Y - stringUnit+5)-35,
-                //    ( start2Y + (1.5 * stringUnit + 10))-35,
-                //    ( start2Y - (1.5 * stringUnit + 10))-35,
-                //     (start2Y + (2 * stringUnit + 15))-35,
-                //     (start2Y - (2 * stringUnit + 15))-35,
-                //    ( start2Y + (2.5 * stringUnit + 20))-35,
-                //   (  start2Y - (2.5 * stringUnit + 20)-35),
-                //     start2Y + (3 * stringUnit + 100)
+                    start2Y + (4 * stringUnit - 35)
                 ];
             } else if (currentPatern === PATTERN_3) {
                 let start3X = window.innerWidth / 2;
@@ -196,12 +185,12 @@ window.onload = function() {
 
                 xPositions = [
                     start3X,
-                    start3X - 100 / 2,
-                    start3X + 100 / 2,
-                    start3X - 200 / 2,
-                    start3X + 200 / 2,
-                    start3X - 300 / 2,
-                    start3X + 300 / 2,
+                    start3X - 100 / 3,
+                    start3X + 100 / 3,
+                    start3X - 200 / 3,
+                    start3X + 200 / 3,
+                    start3X - 300 / 3,
+                    start3X + 300 / 3,
                     start3X
                     
                 ];
@@ -213,7 +202,7 @@ window.onload = function() {
                     (start3Y - (100 / 2)-50)-75,
                    ( start3Y)-75,
                     (start3Y)-75,
-                    (start3Y + 60)-15
+                    (start3Y -80)
                 ];
             }
 
