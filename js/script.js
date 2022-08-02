@@ -467,14 +467,18 @@ window.onload = function() {
         //feature that changes the sound of the chimes
         changeSoundButton.addEventListener("click", function(event) {
             currentSoundModeIndex++;
+
             if (currentSoundModeIndex === selfSoundArray.length) {
-                currentSoundModeIndex = 0;
+              currentSoundModeIndex = 0;
             }
-            for (let i = 0; i < chimes.length; ++i) {
-                chimes[i].setSound(selfSoundArray[currentSoundModeIndex], impactSoundArray[currentSoundModeIndex]);
+        
+            for (let i = 0; i < chimesArray.length; i++) {
+              chimesArray[i].selfSound = selfSoundArray[currentSoundModeIndex];
+              chimesArray[i].impactSound = impactSoundArray[currentSoundModeIndex];
             }
-            currentSelfSoundMode = selfSoundArray[currentSoundModeIndex].id;
-            print();
+        currentSelfSoundMode = selfSoundArray[currentSoundModeIndex].id;
+        
+        print();
         });
         //feature that goes through the look/characters of the chimes
         changeLookButton.addEventListener("click", function(event) {
@@ -730,7 +734,7 @@ modeButton.addEventListener("click", function(event) {
                             let difference = Math.sqrt(Math.pow((chimesArray[j].pos.x - chimesArray[i].pos.x), 2) + Math.pow((chimesArray[j].pos.y - chimesArray[i].pos.y), 2));
 
                             //determines if there is collision or not between 2 chimes objs
-                            if (difference < 10) {
+                            if (difference < 20) {
                                 chimesArray[i].impact = true;
                                 chimesArray[j].impact = true;
                                 if (chimesArray[j].isColliding === false) {

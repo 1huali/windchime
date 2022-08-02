@@ -147,7 +147,6 @@ class Chimes {
 
         }, self.delayInterval);
 
-        // this.selfSound.play();
 
     }
 
