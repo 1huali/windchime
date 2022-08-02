@@ -95,6 +95,7 @@ Tom Gauthier
 special thanks to Sabine Rosenberg and Raphael Nelson ❀ .
 
 Last edit : August 2022
+Version 1
 all updates on https://github.com/1huali/windchime.
 
 source :
