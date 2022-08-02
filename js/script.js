@@ -142,7 +142,7 @@ window.onload = function() {
                     window.innerWidth / 2 - windBoxRatio7th
                 ];
                 yPositions = [
-                    topY + stringUnit * 2+40,
+                    topY + stringUnit +15 ,
                     topY + stringUnit * 4-50,
                     topY + stringUnit * 2.5-70,
                     topY + stringUnit * 2.5-70,
@@ -156,15 +156,15 @@ window.onload = function() {
                 let offset2X = window.innerWidth / 10;
                 xPositions = [
                     start2X,
-                    start2X + 0.5* offset2X+10,
-                    start2X + 0.5 * offset2X+10,
-                    start2X + (1 * offset2X + 15),
-                    start2X + (1 * offset2X + 15),
-                    start2X + (2 * offset2X + 20),
-                    start2X + (2 * offset2X + 20),
-                    start2X + (3 * offset2X + 25),
-                    start2X + (3 * offset2X + 25),
-                    start2X + (2 * offset2X + 25)
+                    start2X + 0.5* offset2X+10+50,
+                    start2X + 0.5 * offset2X+10+50,
+                    start2X + (1 * offset2X + 15+50),
+                    start2X + (1 * offset2X + 15+50),
+                    start2X + (2 * offset2X + 20+50),
+                    start2X + (2 * offset2X + 20+50),
+                    start2X + (3 * offset2X + 25+50),
+                    start2X + (3 * offset2X + 25+50),
+                    start2X + (2 * offset2X + 25+50)
                     
                 ];
                 yPositions = [
