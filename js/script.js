@@ -156,29 +156,39 @@ window.onload = function() {
                 let offset2X = window.innerWidth / 10;
                 xPositions = [
                     start2X,
-                    start2X + 0.5* offset2X+10+50,
-                    start2X + 0.5 * offset2X+10+50,
-                    start2X + (1 * offset2X + 15+50),
-                    start2X + (1 * offset2X + 15+50),
-                    start2X + (2 * offset2X + 20+50),
-                    start2X + (2 * offset2X + 20+50),
-                    start2X + (3 * offset2X + 25+50),
-                    start2X + (3 * offset2X + 25+50),
-                    start2X + (2 * offset2X + 25+50)
+                    start2X +  offset2X,
+                    start2X +  offset2X,
+                    start2X+ (2*offset2X),                   
+                    start2X+ (2*offset2X),                    
+                    start2X +  (3*offset2X),
+                    start2X + (3*offset2X),
+                    start2X + (4*offset2X),
+                    start2X + (4*offset2X),
+                    start2X + (2.5 * offset2X)
                     
                 ];
                 yPositions = [
                     (start2Y)-35,
-                    (start2Y + stringUnit+5)-35,
-                    (start2Y - stringUnit+5)-35,
-                   ( start2Y + (1.5 * stringUnit + 10))-35,
-                   ( start2Y - (1.5 * stringUnit + 10))-35,
-                    (start2Y + (2 * stringUnit + 15))-35,
-                    (start2Y - (2 * stringUnit + 15))-35,
-                   ( start2Y + (2.5 * stringUnit + 20))-35,
-                  (  start2Y - (2.5 * stringUnit + 20)-35),
-                    start2Y + (3 * stringUnit + 100)
+                    start2Y + stringUnit-35,
+                    start2Y - stringUnit-35,
+                   (start2Y + (1.5 * stringUnit + 10))-35,
+                   (start2Y - (1.5 * stringUnit + 10))-35,
+                    start2Y + (2 * stringUnit)-35,
+                    start2Y - (2 * stringUnit)-35,
+                   start2Y + (2.5 * stringUnit )-35,
+                  (start2Y - (2.5 * stringUnit)-35),
+                    start2Y + (4 * stringUnit + 35)
 
+                //     (start2Y)-35,
+                //     (start2Y + stringUnit+5)-35,
+                //     (start2Y - stringUnit+5)-35,
+                //    ( start2Y + (1.5 * stringUnit + 10))-35,
+                //    ( start2Y - (1.5 * stringUnit + 10))-35,
+                //     (start2Y + (2 * stringUnit + 15))-35,
+                //     (start2Y - (2 * stringUnit + 15))-35,
+                //    ( start2Y + (2.5 * stringUnit + 20))-35,
+                //   (  start2Y - (2.5 * stringUnit + 20)-35),
+                //     start2Y + (3 * stringUnit + 100)
                 ];
             } else if (currentPatern === PATTERN_3) {
                 let start3X = window.innerWidth / 2;
