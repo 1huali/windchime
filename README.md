@@ -38,9 +38,9 @@ suspended so as to chime when blown by the wind. In an html context, the wind ch
 be simplified as framed and organized elements that returns to initial state after impact.
 
 what happens to all of the common objects that requires Nature’s participation to function? This 
-program is an attempt to rudimentary simulate a natural environment digitally on one of my dearest 
-object, the wind chime. Even though many believe possible the concept of saving tangible objects through
- technology, this program was a simple call to fulfilment of personal hoarding issues *******in order to preserve this artefact.****** 
+program is an attempt to archive one of my favorite artifact, the wind chime, in a rudimentary natural
+ environment simulation. Although many believe possible the concept of saving tangible objects through 
+ technology, this program was nothing deeper than a simple call to fulfill personal compulsive hoarding issues.
 
 
 ꧁✿/----------------------------------------------------------------------------------------------------
@@ -68,10 +68,11 @@ L’instrument du carillon à vent est un arrangement esthétique de petites pi�
 de manière à sonner lorsque soufflé au vent. Dans un contexte html, le système du carillon pourrait être simplifié à des éléments 
 encadrés et organisés pour revenir à l'état initial après un impact.
 
-Qu'advient-il des objets banaux qui nécessitent la participation de la nature pour fonctionner? Ce programme est une tentative 
-rudimentaire de simulation d'un environnement naturel par voie digitale sur l'un de mes instruments favoris, le carillon à vent. 
-Bien que plusieurs croient possible le concept de préserver des objets tangibles à travers la technologie, ce programme n’est qu’un
- simple appel à assouvir mes habitudes d’accumulation compulsive.
+Qu'advient-il des objets quotidiens qui nécessitent la participation de la Nature pour fonctionner? Ce programme est une simulation
+rudimentaire et digitale d'un environnement naturel sur l'un de mes instruments favoris, le carillon à vent. Alors que plusieurs 
+croient possible le concept de préserver des objets tangibles à travers la technologie, ce programme ne cherche pas plus que remplir 
+des vides d’accumulatrice compulsive.
+
 
 ꧁✿꧂ 
 .　　　　　　　　　　 ✦ 　　　　 ❀   　　　˚　　❀　　　　　　꧁❀❀　　　✿　　　　　   ✿　　　　　　　　　　　　　.　☄　　　　　꧁✿꧂　　　　. 　　 　　　
@@ -91,7 +92,7 @@ by Wawa Li
 programmers :
 Wawa Li
 Tom Gauthier
-special thanks to Sabine Rosenberg!
+special thanks to Sabine Rosenberg and Raphael Nelson ❀ .
 
 Last edit : July 2022
 
