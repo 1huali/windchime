@@ -142,7 +142,8 @@ window.onload = function() {
                     window.innerWidth / 2 - windBoxRatio7th
                 ];
                 yPositions = [
-                    topY + stringUnit *2 -100 ,
+                    topY + stringUnit *2 -40 ,
+
                     topY + stringUnit * 4-50,
                     topY + stringUnit * 2.5-70,
                     topY + stringUnit * 2.5-70,
@@ -168,16 +169,16 @@ window.onload = function() {
                     
                 ];
                 yPositions = [
-                    (start2Y)-35,
-                    start2Y + stringUnit-35,
-                    start2Y - stringUnit-35,
-                   (start2Y + (1.5 * stringUnit + 10))-35,
-                   (start2Y - (1.5 * stringUnit + 10))-35,
-                    start2Y + (2 * stringUnit)-35,
-                    start2Y - (2 * stringUnit)-35,
-                   start2Y + (2.5 * stringUnit )-35,
-                  (start2Y - (2.5 * stringUnit)-35),
-                    start2Y + (4 * stringUnit - 35)
+                    (start2Y),
+                    start2Y + stringUnit,
+                    start2Y - stringUnit,
+                   (start2Y + (1.5 * stringUnit + 10)),
+                   (start2Y - (1.5 * stringUnit + 10)),
+                    start2Y + (2 * stringUnit),
+                    start2Y - (2 * stringUnit),
+                   start2Y + (2.5 * stringUnit ),
+                  (start2Y - (2.5 * stringUnit)),
+                    start2Y + (4 * stringUnit)
                 ];
             } else if (currentPatern === PATTERN_3) {
                 let start3X = window.innerWidth / 2;
@@ -202,7 +203,7 @@ window.onload = function() {
                     (start3Y - (100 / 2)-50)-75,
                    ( start3Y)-75,
                     (start3Y)-75,
-                    (start3Y -80)
+                    (start3Y -50)
                 ];
             }
 
@@ -733,7 +734,7 @@ modeButton.addEventListener("click", function(event) {
                             let difference = Math.sqrt(Math.pow((chimesArray[j].pos.x - chimesArray[i].pos.x), 2) + Math.pow((chimesArray[j].pos.y - chimesArray[i].pos.y), 2));
 
                             //determines if there is collision or not between 2 chimes objs
-                            if (difference < 20) {
+                            if (difference < 40) {
                                 chimesArray[i].impact = true;
                                 chimesArray[j].impact = true;
                                 if (chimesArray[j].isColliding === false) {
