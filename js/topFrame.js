@@ -1,4 +1,4 @@
-class suspendorBase {
+class topFrame {
 
     constructor(el, x, y, currentLook) {
         this.pos = new p5.Vector(x, y);

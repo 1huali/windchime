@@ -1,6 +1,5 @@
 class Core extends Chimes{
-//pendulum trajectory class. eventually, will classify regarding motion
-//https://thecodingtrain.com/CodingChallenges/159-simple-pendulum-simulation.html
+
 
     constructor(stringChime,el,x,y){
 

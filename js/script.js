@@ -114,7 +114,7 @@ window.onload = function() {
         let windchimeBoxM = windchimeBox.getBoundingClientRect();
         let windchimeWidth = windchimeBoxM.width;
 
-        let topPlate = new suspendorBase(document.getElementById(`plate`), 0, topY + 10, currentPlateLook);
+        let topPlate = new topFrame(document.getElementById(`plate`), 0, topY + 10, currentPlateLook);
 
         const PATTERN_1 = 0,
             PATTERN_2 = 1,
