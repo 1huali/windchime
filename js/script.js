@@ -647,7 +647,7 @@ modeButton.addEventListener("click", function(event) {
             // soundModeText.innerHTML = currentSelfSoundMode;
             patternTextMode.innerHTML = patternListArray[patternCurrentIndex];
             muteText.innerHTML = mute ? 'On' : 'Off';
-            lightText.innerHTML = light ? 'Dark' : 'Light';
+            lightText.innerHTML = light ? 'Light' : 'Dark';
         }
 
         function micInput() {
