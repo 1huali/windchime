@@ -521,6 +521,28 @@ window.onload = function() {
             print();
         });
 
+        userModeSwitch.addEventListener("click", function (event) {
+            // switch state to voiceInput or mouseInput
+        
+        
+        //taken off version july 2022
+            toggle = !toggle;
+            if (toggle) {
+              forceMode = `mouse force input`;
+              currentForceInstructionText = `You can implement the wind by clicking on the chimes.`;
+              currentAngleVelText = ``;
+              currentForceLevelText = `0`;
+              print();
+            } else {
+              forceMode = `mic input`;
+              currentForceInstructionText = `You can implement the wind by blowing in your mic.`;
+              currentForceLevelText = `0`;
+              //value should change with the wind force
+              print();
+            }
+        
+        
+          });
 
         function assignStringPattern() {
             let newStringLook = stringFormArray[stringFormIndex];
@@ -630,8 +652,7 @@ modeButton.addEventListener("click", function(event) {
         }
 
         function micInput() {
-            //https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API and Sabine's help
-            //librairy web audio
+
             window.AudioContext = window.AudioContext || window.webkitAudioContext;
             let audioContext = new AudioContext();
             navigator.mediaDevices.getUserMedia({
