@@ -71,7 +71,7 @@ window.onload = function() {
         plateLookArray.push(`━━━━━━━༺❀༻━━━━━━━`);
         plateLookArray.push(`·*̩̩͙˚̩̥̩̥*̩̩̥͙　✩　z*̩̩zZ*̩‧͙☁·͙*̩Zz*̩̩z ✩　*̩̩̥͙˚̩̥̩̥*̩̩͙‧.`);
         plateLookArray.push(`·✧head in clouds*✧*feet on ground✧·`);
-        plateLookArray.push(`┈┈꧁ Heavens below ꧂┈┈`);
+        plateLookArray.push(`┈┈꧁ heavens below ꧂┈┈`);
         plateLookArray.push(`----------------- top-frame -----------------`);
 
 
