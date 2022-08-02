@@ -183,14 +183,14 @@ class Chimes {
 
     }
 
-    setSound(selfSound, impactSound) {
+    // setSound(selfSound, impactSound) {
 
 
-        this.selfSound = selfSound;
-        this.impactSound = impactSound;
+    //     this.selfSound = selfSound;
+    //     this.impactSound = impactSound;
 
 
-    }
+    // }
 
 
 } //end of class

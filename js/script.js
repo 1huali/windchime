@@ -19,7 +19,7 @@ window.onload = function() {
 
         //el is the getElementbyId thing visual
         let userModeSwitch = document.getElementById(`triggerButton`);
-        let muteText = document.getElementById(``)
+        let muteText = document.getElementById(`Off`)
 
         //buttons
         let light = true;
@@ -387,10 +387,10 @@ window.onload = function() {
         let coinSound = document.getElementById(`coinSound`);
         let coinSound2 = document.getElementById(`coinSound2`);
 
-        let packImage = document.querySelector('.pack__image');
-        packImage.addEventListener('click', (event) => {
-            packImage.parentNode.style.display = 'none';
-        });
+        // let packImage = document.querySelector('.pack__image');
+        // packImage.addEventListener('click', (event) => {
+        //     packImage.parentNode.style.display = 'none';
+        // });
 
         selfSoundArray.push(dustSound);
         impactSoundArray.push(dustSound2);
@@ -497,6 +497,7 @@ window.onload = function() {
                     chimesArray[i].impactSound.pause();
                 }
             }
+            print();
         }); //end mute button
 
         //new properties adapted to diff events and contexts.
@@ -529,12 +530,12 @@ window.onload = function() {
             toggle = !toggle;
             if (toggle) {
               forceMode = `Mouse/Tap Input`;
-              currentAngleVelText = ``;
-              currentForceLevelText = `0`;
+            //   currentAngleVelText = ``;
+            //   currentForceLevelText = `0`;
               print();
             } else {
               forceMode = `Mic Input`;
-              currentForceLevelText = `0`;
+            //   currentForceLevelText = `0`;
               //value should change with the wind force
               print();
             }
