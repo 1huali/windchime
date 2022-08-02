@@ -36,7 +36,7 @@ header {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   font-weight: 500;
   font-weight: bold;
@@ -44,7 +44,7 @@ h1 {
 }
 @media (min-width: 991px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -153,7 +153,7 @@ h1 {
 }
 @media (min-width: 768px) and (max-width: 1365px) {
   .databox .data__button, .databox .data__value {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 @media (min-width: 991px) and (max-width: 1365px) {
@@ -195,7 +195,7 @@ h1 {
 
 main {
   position: relative;
-  top: 1rem;
+  top: 1.3rem;
   flex-grow: 1;
   display: flex;
 }
@@ -221,22 +221,22 @@ main .plate {
   top: 0;
   width: 100%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 @media (max-width: 480px) {
   main .plate {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 }
 main .strings {
   position: absolute;
   display: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
 }
 @media (max-width: 480px) {
   main .strings {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 }
 main .mass {
@@ -247,7 +247,7 @@ main .mass {
 }
 @media (max-width: 480px) {
   main .mass {
-    font-size: 4em;
+    font-size: 2em;
   }
 }
 main .core {

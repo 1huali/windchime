@@ -178,7 +178,11 @@ window.onload = function() {
                     start2Y - (2 * stringUnit)-90,
                    start2Y + (2.5 * stringUnit )-90,
                   (start2Y - (2.5 * stringUnit)-90),
+                  //mobile
                     start2Y + (4 * stringUnit - 90)
+                     //desktop
+                    //  start2Y + (4 * stringUnit - 10)
+
                 ];
             } else if (currentPatern === PATTERN_3) {
                 let start3X = window.innerWidth / 2;
@@ -203,7 +207,12 @@ window.onload = function() {
                     (start3Y - (100 / 2)-50)-100,
                    ( start3Y)-100,
                     (start3Y)-100,
+                    //mobile:
                     (start3Y -70)
+                    //desktop:
+                    // (start3Y -30)
+
+
                 ];
             }
 
