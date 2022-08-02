@@ -19,7 +19,7 @@ window.onload = function() {
 
         //el is the getElementbyId thing visual
         let userModeSwitch = document.getElementById(`triggerButton`);
-        let muteText = document.getElementById(`Off`)
+        let muteText = document.getElementById(`muteText`);
 
         //buttons
         let light = true;
