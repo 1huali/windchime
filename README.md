@@ -13,7 +13,7 @@
 　.　　　　✿　　　꧁✿　❀　　　　　. 　　 　 ❀ ✿꧂ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ‍ ,　　　　　　❀✿꧂　　　　　　　* .　❀　　　 　　　　　　　　　　　　　　.　
 　　　　　　　❀　　 ✦ 　　　　   　 　　　˚　　　　　　　　　　　　　　❀　　　　　　   　　　　　　　　　　　　　　　.　　　　　　　　　　　꧁✿　　
 
-This program is a digitally simulated wind chime instrument.
+This program is an HTML simulated wind chime instrument.
 
 
 instructions:
@@ -45,7 +45,7 @@ program is an attempt to archive one of my favorite artifact, the wind chime, in
 
 ꧁✿/----------------------------------------------------------------------------------------------------
 
-ce programme est un carillon à vent simulé numériquement.
+ce programme est un carillon à vent simulé en format HTML.
 
 
 instructions :
