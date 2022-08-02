@@ -143,9 +143,9 @@ $data-margin-desktop: 1.5rem;
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-size: 11px;
+      font-size: 12px;
       @include tablet {
-        font-size: 12px;
+        font-size: 13px;
       }
       @include large-tablet {
         font-size: 1rem;
@@ -217,9 +217,9 @@ main {
     top: 0;
     width: 100%;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
     @include mobile {
-      font-size: 0.5rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -239,7 +239,7 @@ main {
     text-align: center;
     font-size: 10vh;
     @include mobile {
-      font-size: 2em;
+      font-size: 3em;
     }
   }
 

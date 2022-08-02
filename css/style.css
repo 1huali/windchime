@@ -1,16 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 @font-face {
   font-family: "times-new-roman";
   src: url("../assets/font/times-new-roman.ttf") format("truetype");
 }
-
 * {
   font-family: "times-new-roman";
 }
 
-html,
-body {
+body,
+html {
   width: 100%;
   height: 100%;
 }
@@ -44,7 +42,6 @@ h1 {
   font-weight: bold;
   margin: 1rem;
 }
-
 @media (min-width: 991px) {
   h1 {
     font-size: 2rem;
@@ -66,32 +63,27 @@ h1 {
   align-items: center;
   transition: max-width 0.3s linear;
 }
-
-.pack>img {
+.pack > img {
   cursor: pointer;
 }
-
 @media (max-width: 767px) {
-  .pack>img {
+  .pack > img {
     height: 50%;
   }
 }
-
 @media (max-width: 1365px) {
-  .pack>img {
+  .pack > img {
     content: url("../assets/images/windchime-box_halfSlant.png");
   }
 }
-
 @media (min-width: 768px) {
-  .pack>img {
+  .pack > img {
     height: 90%;
     width: auto;
   }
 }
-
 @media (min-width: 991px) {
-  .pack>img {
+  .pack > img {
     content: url("../assets/images/windchime-box_fullSlant.png");
   }
 }
@@ -119,43 +111,36 @@ h1 {
   gap: 0.5rem;
   transition: max-height 0.2s linear, border-color 0.2s ease-in-out;
 }
-
 @media (min-width: 481px) and (max-width: 767px) {
   .databox {
     max-width: 30rem;
   }
 }
-
 @media (max-width: 767px) {
   .databox {
     width: 85%;
   }
 }
-
 @media (min-width: 768px) {
   .databox {
     width: 32rem;
   }
 }
-
 @media (max-width: 767px) {
   .databox .data {
     width: calc(25% - 0.5rem);
   }
 }
-
 @media (min-width: 481px) and (max-width: 767px) {
   .databox .data {
     max-width: 7rem;
   }
 }
-
 @media (min-width: 768px) {
   .databox .data {
     width: 7rem;
   }
 }
-
 .databox .data__button, .databox .data__value {
   box-sizing: border-box;
   width: 100%;
@@ -164,21 +149,18 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
 }
-
 @media (min-width: 768px) and (max-width: 1365px) {
   .databox .data__button, .databox .data__value {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
-
 @media (min-width: 991px) and (max-width: 1365px) {
   .databox .data__button, .databox .data__value {
     font-size: 1rem;
   }
 }
-
 .databox .data__button {
   box-sizing: border-box;
   border: 0;
@@ -186,28 +168,23 @@ h1 {
   margin: 0;
   border: 1px solid #000000;
 }
-
 .databox .data__button:hover {
   background-color: #000000;
   color: #FFFFFF;
 }
-
 .databox .data .--dark {
   background-color: #000000;
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
 }
-
 .databox .data__value {
   margin: 0;
 }
-
 @media (min-width: 991px) and (max-width: 1365px) {
   .databox .data__value {
     margin-top: 0.25rem;
   }
 }
-
 @media (min-width: 1366px) {
   .databox .data__value {
     flex-grow: 1;
@@ -222,15 +199,13 @@ main {
   flex-grow: 1;
   display: flex;
 }
-
 main #windchimeBox {
   height: 34rem;
   width: 24rem;
   margin: 0 auto;
   max-width: 800px;
 }
-
-main .plate, main .strings, main .mass {
+main .mass, main .plate, main .strings {
   -webkit-user-select: none;
   /* Safari */
   -moz-user-select: none;
@@ -240,50 +215,41 @@ main .plate, main .strings, main .mass {
   user-select: none;
   /* Standard */
 }
-
 main .plate {
   margin: 0;
   position: absolute;
   top: 0;
   width: 100%;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
-
 @media (max-width: 480px) {
   main .plate {
-    font-size: 0.5rem;
+    font-size: 1.2rem;
   }
 }
-
 main .strings {
   position: absolute;
   display: none;
   font-size: 1rem;
   text-align: center;
 }
-
 @media (max-width: 480px) {
   main .strings {
     font-size: 0.5rem;
   }
 }
-
 main .mass {
   position: absolute;
   display: none;
   text-align: center;
   font-size: 10vh;
 }
-
 @media (max-width: 480px) {
   main .mass {
-    font-size: 2em;
+    font-size: 3em;
   }
 }
-
 main .core {
   transform: scale(1.2);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
