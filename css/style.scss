@@ -37,13 +37,13 @@ header {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: 500;
   font-weight: bold;
   margin: 1rem;
   @include large-tablet-and-more {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -143,7 +143,7 @@ $data-margin-desktop: 1.5rem;
       justify-content: center;
       align-items: center;
       text-align: center;
-      font-size: 12px;
+      font-size: 11px;
       @include tablet {
         font-size: 13px;
       }
@@ -217,9 +217,9 @@ main {
     top: 0;
     width: 100%;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     @include mobile {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
 
@@ -229,7 +229,7 @@ main {
     font-size: 1rem;
     text-align: center;
     @include mobile {
-      font-size: 0.5rem;
+      font-size: 1rem;
     }
   }
 
@@ -239,7 +239,7 @@ main {
     text-align: center;
     font-size: 10vh;
     @include mobile {
-      font-size: 3em;
+      font-size: 3.5em;
     }
   }
 

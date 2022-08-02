@@ -36,7 +36,7 @@ header {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   font-weight: 500;
   font-weight: bold;
@@ -44,7 +44,7 @@ h1 {
 }
 @media (min-width: 991px) {
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -149,7 +149,7 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
 }
 @media (min-width: 768px) and (max-width: 1365px) {
   .databox .data__button, .databox .data__value {
@@ -221,11 +221,11 @@ main .plate {
   top: 0;
   width: 100%;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 @media (max-width: 480px) {
   main .plate {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 main .strings {
@@ -236,7 +236,7 @@ main .strings {
 }
 @media (max-width: 480px) {
   main .strings {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
 }
 main .mass {
@@ -247,7 +247,7 @@ main .mass {
 }
 @media (max-width: 480px) {
   main .mass {
-    font-size: 3em;
+    font-size: 3.5em;
   }
 }
 main .core {
