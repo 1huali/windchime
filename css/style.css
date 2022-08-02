@@ -173,9 +173,9 @@ h1 {
   color: #FFFFFF;
 }
 .databox .data .--dark {
-  background-color: #000000;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  background-color: #a5a5a5;
+  color: #ffffff;
+  border: 1px solid #000000;
 }
 .databox .data__value {
   margin: 0;
