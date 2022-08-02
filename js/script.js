@@ -142,14 +142,14 @@ window.onload = function() {
                     window.innerWidth / 2 - windBoxRatio7th
                 ];
                 yPositions = [
-                    topY + stringUnit *2 -40 ,
+                    topY + stringUnit *2 -120 ,
 
-                    topY + stringUnit * 4-50,
-                    topY + stringUnit * 2.5-70,
-                    topY + stringUnit * 2.5-70,
-                    topY + stringUnit * 4-50,
-                    topY + stringUnit * 3-50,
-                    topY + stringUnit * 3-50
+                    (topY + stringUnit * 4-50)-80,
+                    (topY + stringUnit * 2.5-70)-80,
+                    (topY + stringUnit * 2.5-70)-80,
+                    (topY + stringUnit * 4-50)-80,
+                    (topY + stringUnit * 3-50)-80,
+                    (topY + stringUnit * 3-50)-80
                 ];
             } else if (currentPatern === PATTERN_2) {
                 let start2X = window.innerWidth / 4;
@@ -169,16 +169,16 @@ window.onload = function() {
                     
                 ];
                 yPositions = [
-                    (start2Y)-35,
-                    start2Y + stringUnit-35,
-                    start2Y - stringUnit-35,
-                   (start2Y + (1.5 * stringUnit + 10))-35,
-                   (start2Y - (1.5 * stringUnit + 10))-35,
-                    start2Y + (2 * stringUnit)-35,
-                    start2Y - (2 * stringUnit)-35,
-                   start2Y + (2.5 * stringUnit )-35,
-                  (start2Y - (2.5 * stringUnit)-35),
-                    start2Y + (4 * stringUnit - 35)
+                    (start2Y)-90,
+                    start2Y + stringUnit-90,
+                    start2Y - stringUnit-90,
+                   (start2Y + (1.5 * stringUnit + 10))-90,
+                   (start2Y - (1.5 * stringUnit + 10))-90,
+                    start2Y + (2 * stringUnit)-90,
+                    start2Y - (2 * stringUnit)-90,
+                   start2Y + (2.5 * stringUnit )-90,
+                  (start2Y - (2.5 * stringUnit)-90),
+                    start2Y + (4 * stringUnit - 90)
                 ];
             } else if (currentPatern === PATTERN_3) {
                 let start3X = window.innerWidth / 2;
@@ -196,14 +196,14 @@ window.onload = function() {
                     
                 ];
                 yPositions = [
-                    (start3Y + (300 / 2)-50)-75,
-                    (start3Y)-75,
-                    (start3Y)-75,
-                    (start3Y - (100 / 2)-50)-75,
-                    (start3Y - (100 / 2)-50)-75,
-                   ( start3Y)-75,
-                    (start3Y)-75,
-                    (start3Y -50)
+                    (start3Y + (300 / 2)-50)-100,
+                    (start3Y)-100,
+                    (start3Y)-100,
+                    (start3Y - (100 / 2)-50)-100,
+                    (start3Y - (100 / 2)-50)-100,
+                   ( start3Y)-100,
+                    (start3Y)-100,
+                    (start3Y -70)
                 ];
             }
 
