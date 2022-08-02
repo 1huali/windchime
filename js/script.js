@@ -169,7 +169,7 @@ window.onload = function() {
                     
                 ];
                 yPositions = [
-                    (start2Y),
+                    (start2Y)-5,
                     start2Y + stringUnit,
                     start2Y - stringUnit,
                    (start2Y + (1.5 * stringUnit + 10)),
