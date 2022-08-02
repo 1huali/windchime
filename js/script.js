@@ -169,16 +169,16 @@ window.onload = function() {
                     
                 ];
                 yPositions = [
-                    (start2Y)-5,
-                    start2Y + stringUnit,
-                    start2Y - stringUnit,
-                   (start2Y + (1.5 * stringUnit + 10)),
-                   (start2Y - (1.5 * stringUnit + 10)),
-                    start2Y + (2 * stringUnit),
-                    start2Y - (2 * stringUnit),
-                   start2Y + (2.5 * stringUnit ),
-                  (start2Y - (2.5 * stringUnit)),
-                    start2Y + (4 * stringUnit)
+                    (start2Y)-35,
+                    start2Y + stringUnit-35,
+                    start2Y - stringUnit-35,
+                   (start2Y + (1.5 * stringUnit + 10))-35,
+                   (start2Y - (1.5 * stringUnit + 10))-35,
+                    start2Y + (2 * stringUnit)-35,
+                    start2Y - (2 * stringUnit)-35,
+                   start2Y + (2.5 * stringUnit )-35,
+                  (start2Y - (2.5 * stringUnit)-35),
+                    start2Y + (4 * stringUnit - 35)
                 ];
             } else if (currentPatern === PATTERN_3) {
                 let start3X = window.innerWidth / 2;
