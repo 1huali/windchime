@@ -204,12 +204,12 @@ window.onload = function() {
       ];
       yPositions = [
         (start3Y + (300 / 2) - 50) - 100,
-        (start3Y) - 120,
-        (start3Y) - 120,
+        (start3Y) - 145,
+        (start3Y) - 145,
         (start3Y - (100 / 2) - 50) - 100,
         (start3Y - (100 / 2) - 50) - 100,
-        (start3Y) - 120,
-        (start3Y) - 120,
+        (start3Y) - 145,
+        (start3Y) - 145,
         //mobile:
         (start3Y - 65)
         //desktop:
